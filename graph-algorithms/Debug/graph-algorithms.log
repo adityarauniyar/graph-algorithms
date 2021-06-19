@@ -1,0 +1,5 @@
+﻿  main.cpp
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\exploretillmet.h(43): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\exploretillmet.h(56): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\exploretillmet.h(75): warning C4018: '<': signed/unsigned mismatch
+  graph-algorithms.vcxproj -> A:\Coursera\Algo on Graphs\graph-algorithms\Debug\graph-algorithms.exe

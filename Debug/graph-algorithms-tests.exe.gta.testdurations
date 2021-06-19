@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GtaTestDurations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Executable>A:\Coursera\Algo on Graphs\graph-algorithms\Debug\graph-algorithms-tests.exe</Executable>
+  <TestDurations>
+    <TestDuration Test="ExploreTillMet.isReachable_should_be_true_for_densely_linked_vertices" Duration="1" />
+    <TestDuration Test="ExploreTillMet.isReachable_should_be_false_for_sparsely_unlinked_vertices" Duration="1" />
+  </TestDurations>
+</GtaTestDurations>
