@@ -4,5 +4,11 @@
   <TestDurations>
     <TestDuration Test="ExploreTillMet.isReachable_should_be_true_for_densely_linked_vertices" Duration="1" />
     <TestDuration Test="ExploreTillMet.isReachable_should_be_false_for_sparsely_unlinked_vertices" Duration="1" />
+    <TestDuration Test="ExploreTillMetTests.isReachable_should_be_true_for_densely_linked_vertices" Duration="1" />
+    <TestDuration Test="ExploreTillMetTests.isReachable_should_be_false_for_sparsely_unlinked_vertices" Duration="1" />
+    <TestDuration Test="ExploreConnectedGraphsTests.ConnectedGraphs_be_two_for_densely_linked_vertices" Duration="1" />
+    <TestDuration Test="ExploreConnectedGraphsTests.ConnectedGraphs_be_four_for_sparsely_unlinked_vertices" Duration="1" />
+    <TestDuration Test="ExploreConnectedGraphsTests.ConnectedGraphs_be_one_for_densely_linked_vertices" Duration="1" />
+    <TestDuration Test="ExploreConnectedGraphsTests.ConnectedGraphs_be_two_for_sparsely_unlinked_vertices" Duration="1" />
   </TestDurations>
 </GtaTestDurations>

@@ -154,7 +154,9 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ExploreConnectedGraphs.h" />
     <ClInclude Include="ExploreTillMet.h" />
+    <ClInclude Include="StdGraphDimensions.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

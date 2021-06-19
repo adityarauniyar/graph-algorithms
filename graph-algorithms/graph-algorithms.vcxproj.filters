@@ -18,6 +18,12 @@
     <ClInclude Include="ExploreTillMet.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="StdGraphDimensions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ExploreConnectedGraphs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">

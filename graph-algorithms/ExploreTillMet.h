@@ -3,6 +3,8 @@
 #include<stdlib.h>
 #include<vector>
 #include<map>
+#include"StdGraphDimensions.h"
+
 
 // ---------- Problem Description -----------------
 // Task. Given an undirected graph and two distinct vertices 𝑢 and 𝑣, check if there is a path between 𝑢 and 𝑣.
@@ -16,26 +18,22 @@
 
 namespace Basic {
 
-	class ExploreTillMet
+	class ExploreTillMet : public StandardGraphClass
 	{
-	private:
-		int n;
-		int m;
-		int u;
-		int v;
-		std::map<int, std::vector<int>> AdjacencyList;
-		std::vector<bool> VisitedList;
-
-	public:
-		bool isReachable = false;
-		void Explore(int);
-		ExploreTillMet(int, int, std::vector<std::pair<int, int>>, int, int);
-		void Display();
-		ExploreTillMet static Input();
+		private:
+			int u, v;
+			std::vector<bool> VisitedList;
+		public:
+			bool isReachable = false;
+			void Explore(int);
+			ExploreTillMet(int, int, std::vector<std::pair<int, int>>, int, int);
+			void Display();
+			ExploreTillMet static Input();
 
 	};
 
 }
+
 void Basic::ExploreTillMet::Explore(int u) {
 	VisitedList[u] = true;
 	if (u == v) isReachable = true;
@@ -47,7 +45,7 @@ void Basic::ExploreTillMet::Explore(int u) {
 	}
 }
 
-Basic::ExploreTillMet::ExploreTillMet(int n, int m, std::vector<std::pair<int, int>> EdgeList, int u, int v) : n(n), m(m), u(u), v(v) {
+Basic::ExploreTillMet::ExploreTillMet(int n, int m, std::vector<std::pair<int, int>> EdgeList, int u, int v) : StandardGraphClass(n,m), u(u), v(v) {
 	for (int i = 0; i <= n; i++)
 	{
 		VisitedList.push_back(false);
@@ -83,18 +81,12 @@ void Basic::ExploreTillMet::Display() {
 }
 
 Basic::ExploreTillMet Basic::ExploreTillMet::Input() {
-	int n, m, u, v;
+	int n, m;
 	std::vector<std::pair<int, int>> EdgeList;
-	std::cout << "Enter (numVertices'vc' numEdges'ec'): ";
-	std::cin >> n >> m;
+	
+	StandardGraphClass::StdGraphInputs(n, m, EdgeList);
 
-	for (int i = 1; i <= m; i++)
-	{
-		int v1, v2;
-		std::cout << std::endl << "Enter #" << i << " edge by vertex pair (v1 v2): ";
-		std::cin >> v1 >> v2;
-		EdgeList.push_back(std::make_pair(v1, v2));
-	}
+	int u, v;
 
 	// Vertices to determince if they meet.
 	std::cout << std::endl << "Enter vertices to determince if they meet (u v): ";
