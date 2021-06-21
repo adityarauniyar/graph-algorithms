@@ -47,5 +47,11 @@
     <TestDuration Test="DAGStronglyConnectedTests.CASE_1" Duration="1" />
     <TestDuration Test="DAGStronglyConnectedTests.CASE_2" Duration="1" />
     <TestDuration Test="DAGStronglyConnectedTests.CASE_3" Duration="1" />
+    <TestDuration Test="DAGStronglyConnectedTests.CASE_4" Duration="1" />
+    <TestDuration Test="DAGStronglyConnectedTests.CASE_5" Duration="1" />
+    <TestDuration Test="DAGStronglyConnectedTests.CASE_6" Duration="1" />
+    <TestDuration Test="DAGStronglyConnectedTests.CASE_7" Duration="103" />
+    <TestDuration Test="DAGStronglyConnectedTests.CASE_8" Duration="1" />
+    <TestDuration Test="DAGStronglyConnectedTests.CASE_9" Duration="1" />
   </TestDurations>
 </GtaTestDurations>

@@ -9,7 +9,7 @@ a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\directedacyclicgrap
 a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\directedacyclicgraphs.h(47): warning C4018: '<': signed/unsigned mismatch
 a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\dagtopologygraph.h(27): warning C4018: '<': signed/unsigned mismatch
 a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\dagtopologygraph.h(45): warning C4018: '<': signed/unsigned mismatch
-a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\dagstronglyconnected.h(28): warning C4018: '<': signed/unsigned mismatch
-a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\dagstronglyconnected.h(47): warning C4018: '<': signed/unsigned mismatch
-a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\dagstronglyconnected.h(59): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\dagstronglyconnected.h(35): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\dagstronglyconnected.h(74): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\dagstronglyconnected.h(86): warning C4018: '<': signed/unsigned mismatch
   graph-algorithms-tests.vcxproj -> A:\Coursera\Algo on Graphs\graph-algorithms\Debug\graph-algorithms-tests.exe
