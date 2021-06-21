@@ -10,5 +10,42 @@
     <TestDuration Test="ExploreConnectedGraphsTests.ConnectedGraphs_be_four_for_sparsely_unlinked_vertices" Duration="1" />
     <TestDuration Test="ExploreConnectedGraphsTests.ConnectedGraphs_be_one_for_densely_linked_vertices" Duration="1" />
     <TestDuration Test="ExploreConnectedGraphsTests.ConnectedGraphs_be_two_for_sparsely_unlinked_vertices" Duration="1" />
+    <TestDuration Test="ExploreConnectedGraphsTests.ConnectedGraphs_be_four_for_totaly_sparsed_unlinked_vertices" Duration="1" />
+    <TestDuration Test="ExploreTillMetTests.isReachable_should_be_true_for_large_dense_linked_vertices" Duration="2" />
+    <TestDuration Test="DirectedAcyclicGraphsTests.Case_I" Duration="1" />
+    <TestDuration Test="DirectedAcyclicGraphsTests.Case_II" Duration="1" />
+    <TestDuration Test="DirectedAcyclicGraphsTests.Case_III" Duration="1" />
+    <TestDuration Test="DirectedAcyclicGraphsTests.Case_IV" Duration="1" />
+    <TestDuration Test="DirectedAcyclicGraphsTests.Case_V" Duration="1" />
+    <TestDuration Test="DirectedAcyclicGraphsTests.Case_VI" Duration="1" />
+    <TestDuration Test="DirectedAcyclicGraphsTests.Case_VII" Duration="1" />
+    <TestDuration Test="DirectedAcyclicGraphsTests.Case_VIII" Duration="3" />
+    <TestDuration Test="DirectedAcyclicGraphsTests.Case_1" Duration="1" />
+    <TestDuration Test="DirectedAcyclicGraphsTests.Case_2" Duration="1" />
+    <TestDuration Test="DirectedAcyclicGraphsTests.Case_3" Duration="1" />
+    <TestDuration Test="DirectedAcyclicGraphsTests.Case_4" Duration="1" />
+    <TestDuration Test="DirectedAcyclicGraphsTests.Case_5" Duration="1" />
+    <TestDuration Test="DirectedAcyclicGraphsTests.Case_6" Duration="1" />
+    <TestDuration Test="DirectedAcyclicGraphsTests.Case_7" Duration="1" />
+    <TestDuration Test="DirectedAcyclicGraphsTests.Case_8" Duration="2" />
+    <TestDuration Test="DirectedAcyclicGraphsTests.Case_9" Duration="1" />
+    <TestDuration Test="DAGTopologyGraphTests.Case_1" Duration="1" />
+    <TestDuration Test="DAGTopologyGraphTests.Case_2" Duration="1" />
+    <TestDuration Test="DAGTopologyGraphTests.Case_3" Duration="1" />
+    <TestDuration Test="DAGTopologyGraphTests.Case_4" Duration="2" />
+    <TestDuration Test="DAGTopologyGraphTests.Case_5" Duration="1" />
+    <TestDuration Test="DAGTopologyGraphTests.Case_6" Duration="1" />
+    <TestDuration Test="DAGTopologyGraphTests.Case_7" Duration="1" />
+    <TestDuration Test="DAGTopologyGraphTests.Case_8" Duration="2" />
+    <TestDuration Test="DAGTopologyGraphTests.Case_9" Duration="1" />
+    <TestDuration Test="DAGTopologyGraphTests.Case_10" Duration="1" />
+    <TestDuration Test="DAGTopologyGraphTests.Case_11" Duration="1" />
+    <TestDuration Test="DAGTopologyGraphTests.Case_12" Duration="1" />
+    <TestDuration Test="DAGStronglyConnectedTests.ConnectedGraphs_be_one_for_densely_linked_vertices" Duration="1" />
+    <TestDuration Test="DAGStronglyConnectedTests.ConnectedGraphs_be_two_for_sparsely_unlinked_vertices" Duration="1" />
+    <TestDuration Test="DAGStronglyConnectedTests.ConnectedGraphs_be_four_for_totaly_sparsed_unlinked_vertices" Duration="1" />
+    <TestDuration Test="DAGStronglyConnectedTests.CASE_1" Duration="1" />
+    <TestDuration Test="DAGStronglyConnectedTests.CASE_2" Duration="1" />
+    <TestDuration Test="DAGStronglyConnectedTests.CASE_3" Duration="1" />
   </TestDurations>
 </GtaTestDurations>

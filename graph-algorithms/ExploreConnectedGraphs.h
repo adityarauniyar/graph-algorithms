@@ -26,7 +26,13 @@ Basic::ExploreConnectedGraphs::ExploreConnectedGraphs(int n, int m, std::vector<
 		AdjacencyList[EdgeList[i].second].push_back(EdgeList[i].first);
 	}
 
-	if (n>0) ExploreConnected(1);
+	if (n > 0)
+		for (int i = 1; i <= n ; i++) {
+			if (VisitedList[i] == true) continue;
+			++numConnectedGraphgs;
+			ExploreConnected(i);
+		}
+	 
 }
 
 void Basic::ExploreConnectedGraphs::ExploreConnected(int u) {

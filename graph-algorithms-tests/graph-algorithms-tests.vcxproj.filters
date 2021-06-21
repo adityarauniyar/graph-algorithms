@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="mainTests.cpp" />
+    <ClCompile Include="pch.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="ExploreTillMetTests.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="ExploreConnectedGraphsTests.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="InputFromStream.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectedAcyclicGraphsTests.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="DAGTopologyGraphTests.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="AssertArray.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="DAGStronglyConnectedTests.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Tests">
+      <UniqueIdentifier>{1620d95b-3901-4e94-8672-caa4bd96dfec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{681b1e45-3d05-471b-8dcf-f95be771d4d7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

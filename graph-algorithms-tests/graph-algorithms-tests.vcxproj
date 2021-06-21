@@ -33,10 +33,17 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
+    <ClInclude Include="AssertArray.h" />
+    <ClInclude Include="DAGStronglyConnectedTests.h" />
+    <ClInclude Include="DAGTopologyGraphTests.h" />
+    <ClInclude Include="DirectedAcyclicGraphsTests.h" />
+    <ClInclude Include="ExploreConnectedGraphsTests.h" />
+    <ClInclude Include="ExploreTillMetTests.h" />
+    <ClInclude Include="InputFromStream.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ExploreTillMetTests.cpp" />
+    <ClCompile Include="mainTests.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>

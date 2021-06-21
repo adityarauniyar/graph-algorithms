@@ -24,6 +24,15 @@
     <ClInclude Include="ExploreConnectedGraphs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="DirectedAcyclicGraphs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DAGTopologyGraph.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DAGStronglyConnected.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
