@@ -155,6 +155,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Bipartite.h" />
     <ClInclude Include="DAGStronglyConnected.h" />
     <ClInclude Include="DAGTopologyGraph.h" />
     <ClInclude Include="DirectedAcyclicGraphs.h" />

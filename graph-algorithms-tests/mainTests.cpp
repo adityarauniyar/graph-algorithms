@@ -6,6 +6,7 @@
 #include "DAGTopologyGraphTests.h"
 #include "DAGStronglyConnectedTests.h"
 #include "MinEdgePathTests.h"
+#include "BipartiteTests.h"
 
 int main(int argc, char **argv)
 {

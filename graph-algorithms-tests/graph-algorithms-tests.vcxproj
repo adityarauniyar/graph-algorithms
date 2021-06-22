@@ -34,6 +34,7 @@
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
     <ClInclude Include="AssertArray.h" />
+    <ClInclude Include="BipartiteTests.h" />
     <ClInclude Include="DAGStronglyConnectedTests.h" />
     <ClInclude Include="DAGTopologyGraphTests.h" />
     <ClInclude Include="DirectedAcyclicGraphsTests.h" />

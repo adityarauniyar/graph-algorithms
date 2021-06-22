@@ -18,14 +18,14 @@
  //  Output Format.Output the minimum number of edges in a path from 𝑢 to 𝑣, or −1 if there is no path.
 // Memory Limit. 512MB
 
-const std::pair<int, int> numVertex_MinMax = { 2, 105 };
-const std::pair<int, int> numEdges_MinMax = { 0 ,105 };
-
 
 
 // Stress testing with Floyd Warshall Algorithm algorithm with Time Complexity O(n^3)
 
 TEST(MinEdgePathTests, Stress_Test) {
+	const std::pair<int, int> numVertex_MinMax = { 2, 105 };
+	const std::pair<int, int> numEdges_MinMax = { 0 ,105 };
+
 	for (int test = 0; test < 1e3; test++) {
 		int n, m, u, v;
 		std::vector<std::pair<int, int>> EdgeList;

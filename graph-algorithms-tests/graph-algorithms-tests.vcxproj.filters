@@ -33,6 +33,9 @@
     <ClInclude Include="GenerateGraphs.h">
       <Filter>Utils</Filter>
     </ClInclude>
+    <ClInclude Include="BipartiteTests.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
