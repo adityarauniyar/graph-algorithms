@@ -12,4 +12,14 @@ a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\dagtopologygraph.h(
 a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\dagstronglyconnected.h(35): warning C4018: '<': signed/unsigned mismatch
 a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\dagstronglyconnected.h(74): warning C4018: '<': signed/unsigned mismatch
 a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\dagstronglyconnected.h(86): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\minedgepath.h(45): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\minedgepath.h(68): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\generategraphs.h(11): warning C4018: '<=': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\generategraphs.h(33): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\generategraphs.h(48): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\generategraphs.h(50): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\generategraphs.h(59): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\generategraphs.h(60): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\generategraphs.h(61): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\minedgepathtests.h(38): warning C4018: '>': signed/unsigned mismatch
   graph-algorithms-tests.vcxproj -> A:\Coursera\Algo on Graphs\graph-algorithms\Debug\graph-algorithms-tests.exe

@@ -160,6 +160,7 @@
     <ClInclude Include="DirectedAcyclicGraphs.h" />
     <ClInclude Include="ExploreConnectedGraphs.h" />
     <ClInclude Include="ExploreTillMet.h" />
+    <ClInclude Include="MinEdgePath.h" />
     <ClInclude Include="StdGraphDimensions.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

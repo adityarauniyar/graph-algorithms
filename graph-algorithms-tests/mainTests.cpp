@@ -5,6 +5,7 @@
 #include "DirectedAcyclicGraphsTests.h"
 #include "DAGTopologyGraphTests.h"
 #include "DAGStronglyConnectedTests.h"
+#include "MinEdgePathTests.h"
 
 int main(int argc, char **argv)
 {

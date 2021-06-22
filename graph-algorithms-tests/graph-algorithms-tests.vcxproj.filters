@@ -27,6 +27,12 @@
     <ClInclude Include="DAGStronglyConnectedTests.h">
       <Filter>Tests</Filter>
     </ClInclude>
+    <ClInclude Include="MinEdgePathTests.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="GenerateGraphs.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

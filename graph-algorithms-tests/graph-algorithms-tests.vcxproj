@@ -41,6 +41,8 @@
     <ClInclude Include="ExploreTillMetTests.h" />
     <ClInclude Include="InputFromStream.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="MinEdgePathTests.h" />
+    <ClInclude Include="GenerateGraphs.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mainTests.cpp" />

@@ -32,7 +32,7 @@
     <TestDuration Test="DAGTopologyGraphTests.Case_1" Duration="1" />
     <TestDuration Test="DAGTopologyGraphTests.Case_2" Duration="1" />
     <TestDuration Test="DAGTopologyGraphTests.Case_3" Duration="1" />
-    <TestDuration Test="DAGTopologyGraphTests.Case_4" Duration="2" />
+    <TestDuration Test="DAGTopologyGraphTests.Case_4" Duration="3" />
     <TestDuration Test="DAGTopologyGraphTests.Case_5" Duration="1" />
     <TestDuration Test="DAGTopologyGraphTests.Case_6" Duration="1" />
     <TestDuration Test="DAGTopologyGraphTests.Case_7" Duration="1" />
@@ -50,8 +50,15 @@
     <TestDuration Test="DAGStronglyConnectedTests.CASE_4" Duration="1" />
     <TestDuration Test="DAGStronglyConnectedTests.CASE_5" Duration="1" />
     <TestDuration Test="DAGStronglyConnectedTests.CASE_6" Duration="1" />
-    <TestDuration Test="DAGStronglyConnectedTests.CASE_7" Duration="103" />
+    <TestDuration Test="DAGStronglyConnectedTests.CASE_7" Duration="84" />
     <TestDuration Test="DAGStronglyConnectedTests.CASE_8" Duration="1" />
     <TestDuration Test="DAGStronglyConnectedTests.CASE_9" Duration="1" />
+    <TestDuration Test="MinEdgePathTests.CASE_1" Duration="1" />
+    <TestDuration Test="MinEdgePathTests.CASE_2" Duration="1" />
+    <TestDuration Test="MinEdgePathTests.CASE_3" Duration="1" />
+    <TestDuration Test="MinEdgePathTests.CASE_4" Duration="1" />
+    <TestDuration Test="MinEdgePathTests.CASE_5" Duration="1" />
+    <TestDuration Test="MinEdgePathTests.CASE_6" Duration="11120" />
+    <TestDuration Test="MinEdgePathTests.Stress_Test" Duration="69702" />
   </TestDurations>
 </GtaTestDurations>
