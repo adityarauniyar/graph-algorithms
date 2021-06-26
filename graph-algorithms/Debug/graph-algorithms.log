@@ -1,1 +1,35 @@
-﻿  graph-algorithms.vcxproj -> A:\Coursera\Algo on Graphs\graph-algorithms\Debug\graph-algorithms.exe
+﻿  main.cpp
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\stdgraphdimensions.h(42): warning C4244: 'argument': conversion from 'const _Ty' to 'const int', possible loss of data
+          with
+          [
+              _Ty=llong
+          ]
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\stdgraphdimensions.h(44): warning C4244: 'argument': conversion from 'const _Ty' to 'const int', possible loss of data
+          with
+          [
+              _Ty=llong
+          ]
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\stdgraphdimensions.h(52): warning C4244: 'argument': conversion from 'const _Ty' to 'const int', possible loss of data
+          with
+          [
+              _Ty=llong
+          ]
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\stdgraphdimensions.h(54): warning C4244: 'argument': conversion from 'const _Ty' to 'const int', possible loss of data
+          with
+          [
+              _Ty=llong
+          ]
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\stdgraphdimensions.h(62): warning C4244: 'argument': conversion from 'const _Ty' to 'const int', possible loss of data
+          with
+          [
+              _Ty=llong
+          ]
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\stdgraphdimensions.h(64): warning C4244: 'argument': conversion from 'const _Ty' to 'const int', possible loss of data
+          with
+          [
+              _Ty=llong
+          ]
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\exploretillmet.h(41): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\exploretillmet.h(54): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\exploretillmet.h(73): warning C4018: '<': signed/unsigned mismatch
+  graph-algorithms.vcxproj -> A:\Coursera\Algo on Graphs\graph-algorithms\Debug\graph-algorithms.exe

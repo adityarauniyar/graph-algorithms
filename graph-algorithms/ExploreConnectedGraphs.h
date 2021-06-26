@@ -2,7 +2,7 @@
 #include"StdGraphDimensions.h"
 #include<vector>
 
-namespace Basic {
+namespace Adv {
 	class ExploreConnectedGraphs : public StandardGraphClass {
 	private:
 		std::vector<bool> VisitedList;
@@ -13,7 +13,7 @@ namespace Basic {
 	};
 }
 
-Basic::ExploreConnectedGraphs::ExploreConnectedGraphs(int n, int m, std::vector<std::pair<int, int>> EdgeList) 
+Adv::ExploreConnectedGraphs::ExploreConnectedGraphs(int n, int m, std::vector<std::pair<int, int>> EdgeList) 
 	: StandardGraphClass(n, m){
 	for (int i = 0; i <= n; i++)
 	{
@@ -35,7 +35,7 @@ Basic::ExploreConnectedGraphs::ExploreConnectedGraphs(int n, int m, std::vector<
 	 
 }
 
-void Basic::ExploreConnectedGraphs::ExploreConnected(int u) {
+void Adv::ExploreConnectedGraphs::ExploreConnected(int u) {
 	VisitedList[u] = true;
 	int itr = 0;
 	while (itr < AdjacencyList[u].size()) {

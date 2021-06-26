@@ -34,7 +34,7 @@ TEST(MinEdgePathTests, Stress_Test) {
 		std::vector<std::vector<int>> AdjacencyMatrix = GenerateAdjacencyMatrix(EdgeList, n);
 
 		std::vector<std::vector<int>> FloydsMatrix = GenerateFloydWarshallMatrix(AdjacencyMatrix);
-		Basic::MinEdgePath t(n, m, EdgeList, u, v);
+		Adv::MinEdgePath t(n, m, EdgeList, u, v);
 		int ExpectedResult = FloydsMatrix[u][v] > EdgeList.size() ? -1 : FloydsMatrix[u][v];
 		int actualResult = t.getMinEdge(v);
 
@@ -59,7 +59,7 @@ TEST(MinEdgePathTests, CASE_1) {
 	std::istringstream inputStrm("4 4 1 2 4 1 2 3 3 1 2 4");
 	inputToVars(inputStrm, n, m, EdgeList, u, v);
 
-	Basic::MinEdgePath t(n, m, EdgeList, u, v);
+	Adv::MinEdgePath t(n, m, EdgeList, u, v);
 
 	EXPECT_EQ(2, t.getMinEdge(v));
 }
@@ -70,7 +70,7 @@ TEST(MinEdgePathTests, CASE_2) {
 	std::istringstream inputStrm("5 4 5 2 1 3 3 4 1 4 3 5");
 	inputToVars(inputStrm, n, m, EdgeList, u, v);
 
-	Basic::MinEdgePath t(n, m, EdgeList, u, v);
+	Adv::MinEdgePath t(n, m, EdgeList, u, v);
 
 	EXPECT_EQ(-1, t.getMinEdge(v));
 }
@@ -81,7 +81,7 @@ TEST(MinEdgePathTests, CASE_3) {
 	std::istringstream inputStrm("4 2 1 2 3 2 1 4");
 	inputToVars(inputStrm, n, m, EdgeList, u, v);
 
-	Basic::MinEdgePath t(n, m, EdgeList, u, v);
+	Adv::MinEdgePath t(n, m, EdgeList, u, v);
 
 	EXPECT_EQ(-1, t.getMinEdge(v));
 }
@@ -92,7 +92,7 @@ TEST(MinEdgePathTests, CASE_4) {
 	std::istringstream inputStrm("5 8 4 1 4 1 1 1 3 5 1 4 5 2 4 2 4 2 4 3");
 	inputToVars(inputStrm, n, m, EdgeList, u, v);
 
-	Basic::MinEdgePath t(n, m, EdgeList, u, v);
+	Adv::MinEdgePath t(n, m, EdgeList, u, v);
 
 	EXPECT_EQ(3, t.getMinEdge(v));
 }
@@ -103,7 +103,7 @@ TEST(MinEdgePathTests, CASE_5) {
 	std::istringstream inputStrm("6 4 1 2 2 3 3 4 4 5 6 3");
 	inputToVars(inputStrm, n, m, EdgeList, u, v);
 
-	Basic::MinEdgePath t(n, m, EdgeList, u, v);
+	Adv::MinEdgePath t(n, m, EdgeList, u, v);
 
 	EXPECT_EQ(-1, t.getMinEdge(v));
 }
@@ -114,7 +114,7 @@ TEST(MinEdgePathTests, CASE_6) {
 	std::istringstream inputStrm("6 4 1 2 2 3 3 4 4 5 6 3");
 	inputToVars(inputStrm, n, m, EdgeList, u, v);
 
-	Basic::MinEdgePath t(n, m, EdgeList, u, v);
+	Adv::MinEdgePath t(n, m, EdgeList, u, v);
 
 	EXPECT_EQ(-1, t.getMinEdge(v));
 }

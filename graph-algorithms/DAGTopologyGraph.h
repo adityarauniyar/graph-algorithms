@@ -4,7 +4,7 @@
 #include<list>
 
 
-namespace Basic {
+namespace Adv {
 
 	class DAGTopologyGraph : public StandardGraphClass {
 	private:
@@ -17,7 +17,7 @@ namespace Basic {
 	};
 }
 
-Basic::DAGTopologyGraph::DAGTopologyGraph(int n, int m, std::vector<std::pair<int, int>> EdgeList)
+Adv::DAGTopologyGraph::DAGTopologyGraph(int n, int m, std::vector<std::pair<int, int>> EdgeList)
 	: StandardGraphClass(n, m) {
 
 	for (int i = 0; i <= n; i++)
@@ -39,7 +39,7 @@ Basic::DAGTopologyGraph::DAGTopologyGraph(int n, int m, std::vector<std::pair<in
 
 }
 
-void Basic::DAGTopologyGraph::CreateTopologyGraph(int i) {
+void Adv::DAGTopologyGraph::CreateTopologyGraph(int i) {
 	VisitedList[i] = true;
 	int itr = 0;
 	while (itr < AdjacencyList[i].size()) {
@@ -53,6 +53,6 @@ void Basic::DAGTopologyGraph::CreateTopologyGraph(int i) {
 	}
 }
 
-std::list<int> Basic::DAGTopologyGraph::getTopologyOrder() {
+std::list<int> Adv::DAGTopologyGraph::getTopologyOrder() {
 	return TopologyOrder;
 }

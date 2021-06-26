@@ -18,37 +18,6 @@
 // Memory Limit. 512MB
 
 
-// Stress testing with Floyd Warshall Algorithm algorithm with Time Complexity O(n^3)
-
-//TEST(BipartiteTests, Stress_Test) {
-//
-//	const std::pair<int, int> numVertex_MinMax = { 2, 105 };
-//	const std::pair<int, int> numEdges_MinMax = { 0 ,105 };
-//
-//	for (int test = 0; test < 1e3; test++) {
-//		int n, m, u, v;
-//		std::vector<std::pair<int, int>> EdgeList;
-//
-//		GenerateGraphs(numVertex_MinMax, numEdges_MinMax, n, m, EdgeList, u, v);
-//		std::vector<std::vector<int>> AdjacencyMatrix = GenerateAdjacencyMatrix(EdgeList, n);
-//
-//		std::vector<std::vector<int>> FloydsMatrix = GenerateFloydWarshallMatrix(AdjacencyMatrix);
-//		Basic::Bipartite t(n, m, EdgeList, u, v);
-//		int ExpectedResult = FloydsMatrix[u][v] > EdgeList.size ? -1 : FloydsMatrix[u][v];
-//		int actualResult = t.isBipartite;
-//
-//		EXPECT_TRUE(t.isBipartite);
-//
-//
-//		if (ExpectedResult != actualResult) {
-//			std::cout << std::endl << "Failing test case caught";
-//			FloydsMatrix = GenerateFloydWarshallMatrix(AdjacencyMatrix);
-//		}
-//	}
-//
-//}
-
-
 // --------------------- UNIT TESTS --------------------- //
 
 
@@ -58,7 +27,7 @@ TEST(BipartiteTests, CASE_1) {
 	std::istringstream inputStrm("4 4 1 2 4 1 2 3 3 1");
 	inputToVars(inputStrm, n, m, EdgeList);
 
-	Basic::Bipartite t(n, m, EdgeList);
+	Adv::Bipartite t(n, m, EdgeList);
 
 	EXPECT_FALSE(t.isBipartite);
 }
@@ -69,7 +38,7 @@ TEST(BipartiteTests, CASE_2) {
 	std::istringstream inputStrm("5 4 5 2 4 2 3 4 1 4");
 	inputToVars(inputStrm, n, m, EdgeList);
 
-	Basic::Bipartite t(n, m, EdgeList);
+	Adv::Bipartite t(n, m, EdgeList);
 
 	EXPECT_TRUE(t.isBipartite);
 }
@@ -80,7 +49,7 @@ TEST(BipartiteTests, CASE_3) {
 	std::istringstream inputStrm("8 7 5 2 4 2 3 4 1 4 6 7 7 8 8 6");
 	inputToVars(inputStrm, n, m, EdgeList);
 
-	Basic::Bipartite t(n, m, EdgeList);
+	Adv::Bipartite t(n, m, EdgeList);
 
 	EXPECT_TRUE(t.isBipartite);
 }
@@ -91,7 +60,7 @@ TEST(BipartiteTests, CASE_4) {
 	std::istringstream inputStrm("6 4 1 2 2 3 3 4 5 6");
 	inputToVars(inputStrm, n, m, EdgeList);
 
-	Basic::Bipartite t(n, m, EdgeList);
+	Adv::Bipartite t(n, m, EdgeList);
 
 	EXPECT_TRUE(t.isBipartite);
 }
@@ -102,7 +71,7 @@ TEST(BipartiteTests, CASE_5) {
 	std::istringstream inputStrm("4 2 1 2 3 4");
 	inputToVars(inputStrm, n, m, EdgeList);
 
-	Basic::Bipartite t(n, m, EdgeList);
+	Adv::Bipartite t(n, m, EdgeList);
 
 	EXPECT_TRUE(t.isBipartite);
 }
@@ -112,7 +81,18 @@ TEST(BipartiteTests, CASE_6) {
 	std::istringstream inputStrm("4 1 1 2");
 	inputToVars(inputStrm, n, m, EdgeList);
 
-	Basic::Bipartite t(n, m, EdgeList);
+	Adv::Bipartite t(n, m, EdgeList);
 
 	EXPECT_TRUE(t.isBipartite);
+}
+
+TEST(BipartiteTests, CASE_7) {
+	int n, m, u, v;
+	std::vector<std::pair<int, int>> EdgeList;
+	std::istringstream inputStrm("11 13 1 2 1 3 1 4 2 5 3 6 7 7 5 6 5 8 5 9 6 9 6 10 7 10 7 11");
+	inputToVars(inputStrm, n, m, EdgeList);
+
+	Adv::Bipartite t(n, m, EdgeList);
+
+	EXPECT_FALSE(t.isBipartite);
 }

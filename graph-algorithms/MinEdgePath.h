@@ -16,7 +16,7 @@
  //  Output Format.Output the minimum number of edges in a path from 𝑢 to 𝑣, or −1 if there is no path.
 // Memory Limit. 512MB
 
-namespace Basic {
+namespace Adv {
 
 	class MinEdgePath : public StandardGraphClass
 	{
@@ -32,7 +32,7 @@ namespace Basic {
 
 }
 
-void Basic::MinEdgePath::Explore(int u) {
+void Adv::MinEdgePath::Explore(int u) {
 	// Breadth-First-Search of Time Complexity O(|n| + |m|)
 	std::queue<int> BFSqueue;
 	BFSqueue.push(u);
@@ -55,11 +55,11 @@ void Basic::MinEdgePath::Explore(int u) {
 	}
 }
 
-int Basic::MinEdgePath::getMinEdge(int dest) {
+int Adv::MinEdgePath::getMinEdge(int dest) {
 	return minEdgeList[dest];
 }
 
-Basic::MinEdgePath::MinEdgePath(int n, int m, std::vector<std::pair<int, int>> EdgeList, int u, int v) : StandardGraphClass(n, m), u(u), v(v) {
+Adv::MinEdgePath::MinEdgePath(int n, int m, std::vector<std::pair<int, int>> EdgeList, int u, int v) : StandardGraphClass(n, m), u(u), v(v) {
 	
 	for (int i = 0; i <= n; i++){
 		minEdgeList.push_back(-1);
@@ -73,7 +73,7 @@ Basic::MinEdgePath::MinEdgePath(int n, int m, std::vector<std::pair<int, int>> E
 	Explore(this->u);
 }
 
-Basic::MinEdgePath Basic::MinEdgePath::Input() {
+Adv::MinEdgePath Adv::MinEdgePath::Input() {
 	int n, m;
 	std::vector<std::pair<int, int>> EdgeList;
 
@@ -85,5 +85,5 @@ Basic::MinEdgePath Basic::MinEdgePath::Input() {
 	std::cout << std::endl << "Enter vertices to determince if they meet (u v): ";
 	std::cin >> u >> v;
 
-	return Basic::MinEdgePath(n, m, EdgeList, u, v);
+	return Adv::MinEdgePath(n, m, EdgeList, u, v);
 }

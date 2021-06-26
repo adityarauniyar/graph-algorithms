@@ -36,6 +36,15 @@
     <ClInclude Include="BipartiteTests.h">
       <Filter>Tests</Filter>
     </ClInclude>
+    <ClInclude Include="DijkstraTests.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="DetectingAnomaliesTests.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="ShortestPathsTests.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

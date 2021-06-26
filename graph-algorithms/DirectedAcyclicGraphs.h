@@ -4,7 +4,7 @@
 #include<set>
 
 
-namespace Basic {
+namespace Adv {
 
 	class DirectedAcyclicGraph : public StandardGraphClass {
 	private:
@@ -17,7 +17,7 @@ namespace Basic {
 	};
 }
 
-Basic::DirectedAcyclicGraph::DirectedAcyclicGraph(int n, int m, std::vector<std::pair<int, int>> EdgeList)
+Adv::DirectedAcyclicGraph::DirectedAcyclicGraph(int n, int m, std::vector<std::pair<int, int>> EdgeList)
 	: StandardGraphClass(n, m) {
 	for (int i = 0; i <= n; i++)
 	{
@@ -41,7 +41,7 @@ Basic::DirectedAcyclicGraph::DirectedAcyclicGraph(int n, int m, std::vector<std:
 
 }
 
-void Basic::DirectedAcyclicGraph::ExploreCyclic(int i) {
+void Adv::DirectedAcyclicGraph::ExploreCyclic(int i) {
 	VisitedList[i] = true;
 	int itr = 0;
 	while (itr < AdjacencyList[i].size() && !containsCycles) {

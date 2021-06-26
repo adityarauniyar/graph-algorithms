@@ -7,6 +7,9 @@
 #include "DAGStronglyConnectedTests.h"
 #include "MinEdgePathTests.h"
 #include "BipartiteTests.h"
+#include "DijkstraTests.h"
+#include "DetectingAnomaliesTests.h"
+#include "ShortestPathsTests.h"
 
 int main(int argc, char **argv)
 {

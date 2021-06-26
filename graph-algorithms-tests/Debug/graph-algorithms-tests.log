@@ -1,5 +1,35 @@
 ﻿cl : Command line warning D9035: option 'Gm' has been deprecated and will be removed in a future release
   mainTests.cpp
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\stdgraphdimensions.h(42): warning C4244: 'argument': conversion from 'const _Ty' to 'const int', possible loss of data
+          with
+          [
+              _Ty=llong
+          ]
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\stdgraphdimensions.h(44): warning C4244: 'argument': conversion from 'const _Ty' to 'const int', possible loss of data
+          with
+          [
+              _Ty=llong
+          ]
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\stdgraphdimensions.h(52): warning C4244: 'argument': conversion from 'const _Ty' to 'const int', possible loss of data
+          with
+          [
+              _Ty=llong
+          ]
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\stdgraphdimensions.h(54): warning C4244: 'argument': conversion from 'const _Ty' to 'const int', possible loss of data
+          with
+          [
+              _Ty=llong
+          ]
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\stdgraphdimensions.h(62): warning C4244: 'argument': conversion from 'const _Ty' to 'const int', possible loss of data
+          with
+          [
+              _Ty=llong
+          ]
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\stdgraphdimensions.h(64): warning C4244: 'argument': conversion from 'const _Ty' to 'const int', possible loss of data
+          with
+          [
+              _Ty=llong
+          ]
 a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\exploreconnectedgraphs.h(23): warning C4018: '<': signed/unsigned mismatch
 a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\exploreconnectedgraphs.h(41): warning C4018: '<': signed/unsigned mismatch
 a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\exploretillmet.h(41): warning C4018: '<': signed/unsigned mismatch
@@ -24,16 +54,99 @@ a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\generategraph
 a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\minedgepathtests.h(38): warning C4018: '>': signed/unsigned mismatch
 a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\bipartite.h(44): warning C4018: '<': signed/unsigned mismatch
 a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\bipartite.h(62): warning C4018: '<': signed/unsigned mismatch
-a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\bipartitetests.h(56): warning C4101: 'v': unreferenced local variable
-a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\bipartitetests.h(56): warning C4101: 'u': unreferenced local variable
-a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\bipartitetests.h(67): warning C4101: 'v': unreferenced local variable
-a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\bipartitetests.h(67): warning C4101: 'u': unreferenced local variable
-a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\bipartitetests.h(78): warning C4101: 'v': unreferenced local variable
-a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\bipartitetests.h(78): warning C4101: 'u': unreferenced local variable
-a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\bipartitetests.h(89): warning C4101: 'v': unreferenced local variable
-a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\bipartitetests.h(89): warning C4101: 'u': unreferenced local variable
-a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\bipartitetests.h(100): warning C4101: 'v': unreferenced local variable
-a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\bipartitetests.h(100): warning C4101: 'u': unreferenced local variable
-a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\bipartitetests.h(110): warning C4101: 'v': unreferenced local variable
-a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\bipartitetests.h(110): warning C4101: 'u': unreferenced local variable
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\bipartitetests.h(25): warning C4101: 'v': unreferenced local variable
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\bipartitetests.h(25): warning C4101: 'u': unreferenced local variable
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\bipartitetests.h(36): warning C4101: 'v': unreferenced local variable
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\bipartitetests.h(36): warning C4101: 'u': unreferenced local variable
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\bipartitetests.h(47): warning C4101: 'v': unreferenced local variable
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\bipartitetests.h(47): warning C4101: 'u': unreferenced local variable
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\bipartitetests.h(58): warning C4101: 'v': unreferenced local variable
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\bipartitetests.h(58): warning C4101: 'u': unreferenced local variable
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\bipartitetests.h(69): warning C4101: 'v': unreferenced local variable
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\bipartitetests.h(69): warning C4101: 'u': unreferenced local variable
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\bipartitetests.h(79): warning C4101: 'v': unreferenced local variable
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\bipartitetests.h(79): warning C4101: 'u': unreferenced local variable
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\bipartitetests.h(90): warning C4101: 'v': unreferenced local variable
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\bipartitetests.h(90): warning C4101: 'u': unreferenced local variable
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\dijkstra.h(47): warning C4244: 'argument': conversion from '_Ty2' to 'const int', possible loss of data
+          with
+          [
+              _Ty2=llong
+          ]
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\dijkstra.h(47): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\dijkstra.h(48): warning C4244: 'argument': conversion from '_Ty2' to 'const int', possible loss of data
+          with
+          [
+              _Ty2=llong
+          ]
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\dijkstra.h(49): warning C4244: 'argument': conversion from '_Ty2' to 'const int', possible loss of data
+          with
+          [
+              _Ty2=llong
+          ]
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\dijkstra.h(51): warning C4244: 'argument': conversion from '_Ty2' to 'const unsigned int', possible loss of data
+          with
+          [
+              _Ty2=llong
+          ]
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\dijkstra.h(52): warning C4244: 'argument': conversion from '_Ty2' to 'const unsigned int', possible loss of data
+          with
+          [
+              _Ty2=llong
+          ]
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\detectinganomalies.h(43): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\detectinganomalies.h(44): warning C4244: 'initializing': conversion from '_Ty2' to 'int', possible loss of data
+          with
+          [
+              _Ty2=llong
+          ]
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\shortestpaths.h(47): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\shortestpaths.h(48): warning C4244: 'initializing': conversion from '_Ty2' to 'int', possible loss of data
+          with
+          [
+              _Ty2=llong
+          ]
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\shortestpaths.h(50): warning C4244: 'initializing': conversion from '_Ty' to 'int', possible loss of data
+          with
+          [
+              _Ty=llong
+          ]
+c:\program files (x86)\microsoft visual studio\2017\professional\vc\tools\msvc\14.16.27023\include\utility(239): warning C4244: 'initializing': conversion from '_Ty' to '_Ty1', possible loss of data
+          with
+          [
+              _Ty=__int64
+          ]
+          and
+          [
+              _Ty1=int
+          ]
+  a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\dijkstra.h(41): note: see reference to function template instantiation 'std::pair<int,llong>::pair<__int64,int,0>(std::pair<__int64,int> &&) noexcept' being compiled
+  a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\dijkstra.h(41): note: see reference to function template instantiation 'std::pair<int,llong>::pair<__int64,int,0>(std::pair<__int64,int> &&) noexcept' being compiled
+a:\coursera\algo on graphs\graph-algorithms\packages\microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.0\build\native\include\gtest\gtest.h(1392): warning C4805: '==': unsafe mix of type 'const T1' and type 'const T2' in operation
+          with
+          [
+              T1=int
+          ]
+          and
+          [
+              T2=bool
+          ]
+  a:\coursera\algo on graphs\graph-algorithms\packages\microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.0\build\native\include\gtest\gtest.h(1421): note: see reference to function template instantiation 'testing::AssertionResult testing::internal::CmpHelperEQ<T1,T2>(const char *,const char *,const T1 &,const T2 &)' being compiled
+          with
+          [
+              T1=int,
+              T2=bool
+          ]
+  a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\detectinganomaliestests.h(31): note: see reference to function template instantiation 'testing::AssertionResult testing::internal::EqHelper<false>::Compare<int,bool>(const char *,const char *,const T1 &,const T2 &)' being compiled
+          with
+          [
+              T1=int,
+              T2=bool
+          ]
+  a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\detectinganomaliestests.h(31): note: see reference to function template instantiation 'testing::AssertionResult testing::internal::EqHelper<false>::Compare<int,bool>(const char *,const char *,const T1 &,const T2 &)' being compiled
+          with
+          [
+              T1=int,
+              T2=bool
+          ]
   graph-algorithms-tests.vcxproj -> A:\Coursera\Algo on Graphs\graph-algorithms\Debug\graph-algorithms-tests.exe

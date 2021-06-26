@@ -37,6 +37,8 @@
     <ClInclude Include="BipartiteTests.h" />
     <ClInclude Include="DAGStronglyConnectedTests.h" />
     <ClInclude Include="DAGTopologyGraphTests.h" />
+    <ClInclude Include="DetectingAnomaliesTests.h" />
+    <ClInclude Include="DijkstraTests.h" />
     <ClInclude Include="DirectedAcyclicGraphsTests.h" />
     <ClInclude Include="ExploreConnectedGraphsTests.h" />
     <ClInclude Include="ExploreTillMetTests.h" />
@@ -44,6 +46,7 @@
     <ClInclude Include="pch.h" />
     <ClInclude Include="MinEdgePathTests.h" />
     <ClInclude Include="GenerateGraphs.h" />
+    <ClInclude Include="ShortestPathsTests.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mainTests.cpp" />

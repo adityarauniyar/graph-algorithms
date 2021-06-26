@@ -3,7 +3,7 @@
 #include<vector>
 
 
-namespace Basic {
+namespace Adv {
 
 	class DAGStronglyConnected : public StandardGraphClass {
 	private:
@@ -26,7 +26,7 @@ namespace Basic {
 	};
 }
 
-Basic::DAGStronglyConnected::DAGStronglyConnected(int n, int m, std::vector<std::pair<int, int>> EdgeList)
+Adv::DAGStronglyConnected::DAGStronglyConnected(int n, int m, std::vector<std::pair<int, int>> EdgeList)
 	: StandardGraphClass(n, m) {
 
 	for (int i = 0; i <= n; i++)
@@ -68,7 +68,7 @@ Basic::DAGStronglyConnected::DAGStronglyConnected(int n, int m, std::vector<std:
 
 }
 
-void Basic::DAGStronglyConnected::ExploreDAG(int i) {
+void Adv::DAGStronglyConnected::ExploreDAG(int i) {
 	VisitedList[i] = FWDVISITED;
 	int itr = 0;
 	while (itr < AdjacencyList[i].size()) {
@@ -80,7 +80,7 @@ void Basic::DAGStronglyConnected::ExploreDAG(int i) {
 	}
 }
 
-void Basic::DAGStronglyConnected::ExploreReverseDAG(int i) {
+void Adv::DAGStronglyConnected::ExploreReverseDAG(int i) {
 	VisitedList[i] = BKDVISITED;
 	int itr = 0;
 	while (itr < ReverseAdjacencyList[i].size()) {
@@ -94,6 +94,6 @@ void Basic::DAGStronglyConnected::ExploreReverseDAG(int i) {
 }
 
 
-int Basic::DAGStronglyConnected::getNumStronglyConnected() {
+int Adv::DAGStronglyConnected::getNumStronglyConnected() {
 	return numConnectedGraphgs;
 }

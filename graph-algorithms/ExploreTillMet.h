@@ -16,7 +16,7 @@
 // Output Format. Output 1 if there is a path between 𝑢 and 𝑣 and 0 otherwise.
 // Memory Limit. 512MB
 
-namespace Basic {
+namespace Adv {
 
 	class ExploreTillMet : public StandardGraphClass
 	{
@@ -34,7 +34,7 @@ namespace Basic {
 
 }
 
-void Basic::ExploreTillMet::Explore(int u) {
+void Adv::ExploreTillMet::Explore(int u) {
 	VisitedList[u] = true;
 	if (u == v) isReachable = true;
 	int itr = 0;
@@ -45,7 +45,7 @@ void Basic::ExploreTillMet::Explore(int u) {
 	}
 }
 
-Basic::ExploreTillMet::ExploreTillMet(int n, int m, std::vector<std::pair<int, int>> EdgeList, int u, int v) : StandardGraphClass(n,m), u(u), v(v) {
+Adv::ExploreTillMet::ExploreTillMet(int n, int m, std::vector<std::pair<int, int>> EdgeList, int u, int v) : StandardGraphClass(n,m), u(u), v(v) {
 	for (int i = 0; i <= n; i++)
 	{
 		VisitedList.push_back(false);
@@ -60,7 +60,7 @@ Basic::ExploreTillMet::ExploreTillMet(int n, int m, std::vector<std::pair<int, i
 	Explore(this->u);
 }
 
-void Basic::ExploreTillMet::Display() {
+void Adv::ExploreTillMet::Display() {
 	std::cout << std::endl << " ------- OUTPUT -------" << std::endl;
 	std::cout << "Vertices: " << n << std::endl;
 	std::cout << "Edges: " << m << std::endl;
@@ -80,7 +80,7 @@ void Basic::ExploreTillMet::Display() {
 	else std::cout << "FALSE" << std::endl;
 }
 
-Basic::ExploreTillMet Basic::ExploreTillMet::Input() {
+Adv::ExploreTillMet Adv::ExploreTillMet::Input() {
 	int n, m;
 	std::vector<std::pair<int, int>> EdgeList;
 	
@@ -92,5 +92,5 @@ Basic::ExploreTillMet Basic::ExploreTillMet::Input() {
 	std::cout << std::endl << "Enter vertices to determince if they meet (u v): ";
 	std::cin >> u >> v;
 
-	return Basic::ExploreTillMet(n, m, EdgeList, u, v);
+	return Adv::ExploreTillMet(n, m, EdgeList, u, v);
 }

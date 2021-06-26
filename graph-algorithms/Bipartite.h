@@ -16,7 +16,7 @@
  //  Output Format.Output the minimum number of edges in a path from 𝑢 to 𝑣, or −1 if there is no path.
 // Memory Limit. 512MB
 
-namespace Basic {
+namespace Adv {
 
 	class Bipartite : public StandardGraphClass
 	{
@@ -31,7 +31,7 @@ namespace Basic {
 
 }
 
-void Basic::Bipartite::Explore(int u) {
+void Adv::Bipartite::Explore(int u) {
 	// Breadth-First-Search of Time Complexity O(|n| + |m|)
 	std::queue<int> BFSqueue;
 	BFSqueue.push(u);
@@ -52,7 +52,7 @@ void Basic::Bipartite::Explore(int u) {
 	}
 }
 
-Basic::Bipartite::Bipartite(int n, int m, std::vector<std::pair<int, int>> EdgeList) 
+Adv::Bipartite::Bipartite(int n, int m, std::vector<std::pair<int, int>> EdgeList) 
 	: StandardGraphClass(n, m){
 
 	for (int i = 0; i <= n; i++) {
@@ -67,17 +67,11 @@ Basic::Bipartite::Bipartite(int n, int m, std::vector<std::pair<int, int>> EdgeL
 	Explore(1);
 }
 
-Basic::Bipartite Basic::Bipartite::Input() {
+Adv::Bipartite Adv::Bipartite::Input() {
 	int n, m;
 	std::vector<std::pair<int, int>> EdgeList;
 
 	StandardGraphClass::StdGraphInputs(n, m, EdgeList);
 
-	int u, v;
-
-	// Vertices to determince if they meet.
-	std::cout << std::endl << "Enter vertices to determince if they meet (u v): ";
-	std::cin >> u >> v;
-
-	return Basic::Bipartite(n, m, EdgeList);
+	return Adv::Bipartite(n, m, EdgeList);
 }

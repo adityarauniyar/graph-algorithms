@@ -4,7 +4,7 @@
 
 int main(int argc, char *argv[])
 {
-	Basic::ExploreTillMet q1 = Basic::ExploreTillMet::Input();
+	Adv::ExploreTillMet q1 = Adv::ExploreTillMet::Input();
 
 	q1.Display();
 
