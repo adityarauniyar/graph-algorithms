@@ -111,6 +111,17 @@ a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\shortestpaths.h(50)
           [
               _Ty=llong
           ]
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\connectnodeswithmincost.h(74): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\connectnodeswithmincost.h(75): warning C4244: 'initializing': conversion from '_Ty' to 'int', possible loss of data
+          with
+          [
+              _Ty=double
+          ]
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\connectnodeswithmincost.h(76): warning C4244: 'initializing': conversion from '_Ty' to 'int', possible loss of data
+          with
+          [
+              _Ty=double
+          ]
 c:\program files (x86)\microsoft visual studio\2017\professional\vc\tools\msvc\14.16.27023\include\utility(239): warning C4244: 'initializing': conversion from '_Ty' to '_Ty1', possible loss of data
           with
           [

@@ -13,12 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{1cdbf794-ddb6-4a7c-a490-bb8cf9e139e5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ExploreTillMet.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="StdGraphDimensions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ExploreConnectedGraphs.h">
@@ -47,6 +47,15 @@
     </ClInclude>
     <ClInclude Include="ShortestPaths.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConnectNodesWithMinCost.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdGraphDimensions.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStructures.h">
+      <Filter>Utils</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

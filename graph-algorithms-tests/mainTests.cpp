@@ -10,6 +10,7 @@
 #include "DijkstraTests.h"
 #include "DetectingAnomaliesTests.h"
 #include "ShortestPathsTests.h"
+#include "ConnectNodesWithMinCostTests.h"
 
 int main(int argc, char **argv)
 {

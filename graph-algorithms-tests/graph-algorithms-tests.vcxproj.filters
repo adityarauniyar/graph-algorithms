@@ -45,6 +45,9 @@
     <ClInclude Include="ShortestPathsTests.h">
       <Filter>Tests</Filter>
     </ClInclude>
+    <ClInclude Include="ConnectNodesWithMinCostTests.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

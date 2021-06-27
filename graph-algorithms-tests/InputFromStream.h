@@ -75,3 +75,17 @@ void inputToVars(std::istringstream &input, int &n, int &m, std::vector<std::vec
 	}
 
 }
+
+
+// Reading Coordinates
+void inputToVars(std::istringstream &input, int &n, std::vector<std::pair<int, int>> &CoordinatePairs) {
+
+	input >> n;
+	for (int i = 0; i < n; i++) {
+		int v1, v2;
+		input >> v1;
+		input >> v2;
+		CoordinatePairs.push_back(std::make_pair(v1, v2));
+	}
+
+}
