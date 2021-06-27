@@ -11,6 +11,7 @@
 #include "DetectingAnomaliesTests.h"
 #include "ShortestPathsTests.h"
 #include "ConnectNodesWithMinCostTests.h"
+#include "ClusteringTests.h"
 
 int main(int argc, char **argv)
 {

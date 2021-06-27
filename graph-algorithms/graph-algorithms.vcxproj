@@ -156,6 +156,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bipartite.h" />
+    <ClInclude Include="Clustering.h" />
     <ClInclude Include="ConnectNodesWithMinCost.h" />
     <ClInclude Include="DAGStronglyConnected.h" />
     <ClInclude Include="DAGTopologyGraph.h" />

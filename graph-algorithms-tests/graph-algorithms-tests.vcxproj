@@ -35,6 +35,7 @@
   <ItemGroup>
     <ClInclude Include="AssertArray.h" />
     <ClInclude Include="BipartiteTests.h" />
+    <ClInclude Include="ClusteringTests.h" />
     <ClInclude Include="ConnectNodesWithMinCostTests.h" />
     <ClInclude Include="DAGStronglyConnectedTests.h" />
     <ClInclude Include="DAGTopologyGraphTests.h" />

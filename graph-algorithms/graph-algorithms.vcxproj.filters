@@ -57,6 +57,9 @@
     <ClInclude Include="DataStructures.h">
       <Filter>Utils</Filter>
     </ClInclude>
+    <ClInclude Include="Clustering.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">

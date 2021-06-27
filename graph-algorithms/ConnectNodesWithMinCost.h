@@ -43,9 +43,7 @@ namespace Adv {
 }
 
 double Adv::ConnectNodesWithMinCost::FindEucludianDistance(const int &x1, const int &y1, const int &x2, const int &y2) {
-	double param1 = x1 - x2;
-	double param2 = y1 - y2;
-
+	
 	return std::sqrt(std::pow(x1-x2,2) + std::pow(y1 - y2, 2));
 }
 

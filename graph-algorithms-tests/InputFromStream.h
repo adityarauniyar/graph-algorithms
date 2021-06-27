@@ -89,3 +89,17 @@ void inputToVars(std::istringstream &input, int &n, std::vector<std::pair<int, i
 	}
 
 }
+
+// Reading Coordinates with no. of clusters
+void inputToVars(std::istringstream &input, int &n, std::vector<std::pair<int, int>> &CoordinatePairs, int& numCluster) {
+
+	input >> n;
+	for (int i = 0; i < n; i++) {
+		int v1, v2;
+		input >> v1;
+		input >> v2;
+		CoordinatePairs.push_back(std::make_pair(v1, v2));
+	}
+	input >> numCluster;
+
+}
