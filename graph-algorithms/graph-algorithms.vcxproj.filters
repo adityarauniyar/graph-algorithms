@@ -60,6 +60,9 @@
     <ClInclude Include="Clustering.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Bidijkstra.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">

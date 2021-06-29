@@ -3,6 +3,8 @@
 #include<vector>
 
 typedef long long llong;
+typedef std::vector<std::vector<std::vector<std::pair<int, int>>>> FwdAndRevAdjWithCost;
+
 
 void inputToVars(std::istringstream &input, int &n, int &m, std::vector<std::pair<int, int>> &EdgeList) {
 	
@@ -101,5 +103,38 @@ void inputToVars(std::istringstream &input, int &n, std::vector<std::pair<int, i
 		CoordinatePairs.push_back(std::make_pair(v1, v2));
 	}
 	input >> numCluster;
+
+}
+
+// Reading and creating: forward and reverese adjacency list + reading the Queries
+void inputToVars(std::istringstream &input, int &n, FwdAndRevAdjWithCost& Adj, std::vector<std::pair<int, int>>& Queries) {
+
+	int numEdges;
+	
+	input >> n;
+	input >> numEdges;
+
+	std::vector<std::vector<std::pair<int, int>>> FwdAdjList(n+1);
+	std::vector<std::vector<std::pair<int, int>>> RevAdjList(n+1);
+
+	for (int i = 0; i < numEdges; i++) {
+		int v1, v2, cost;
+		input >> v1;
+		input >> v2;
+		input >> cost; 
+		FwdAdjList[v1].push_back(std::make_pair( v2,cost ));
+		RevAdjList[v2].push_back(std::make_pair(v1, cost));
+	}
+	Adj[0] = FwdAdjList;
+	Adj[1] = RevAdjList;
+
+	int numQueries;
+	input >> numQueries;
+	for (int i = 0; i < numQueries; i++) {
+		int u, v;
+		input >> u;
+		input >> v;
+		Queries.push_back({ u,v });
+	}
 
 }

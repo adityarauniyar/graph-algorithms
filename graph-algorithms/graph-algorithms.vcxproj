@@ -167,6 +167,7 @@
     <ClInclude Include="ExploreTillMet.h" />
     <ClInclude Include="DataStructures.h" />
     <ClInclude Include="MinEdgePath.h" />
+    <ClInclude Include="Bidijkstra.h" />
     <ClInclude Include="ShortestPaths.h" />
     <ClInclude Include="StdGraphDimensions.h" />
   </ItemGroup>

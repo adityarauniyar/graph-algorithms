@@ -12,6 +12,7 @@
 #include "ShortestPathsTests.h"
 #include "ConnectNodesWithMinCostTests.h"
 #include "ClusteringTests.h"
+#include "BidijkstraTests.h"
 
 int main(int argc, char **argv)
 {

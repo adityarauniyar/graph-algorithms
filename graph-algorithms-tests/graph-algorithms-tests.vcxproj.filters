@@ -51,6 +51,9 @@
     <ClInclude Include="ClusteringTests.h">
       <Filter>Tests</Filter>
     </ClInclude>
+    <ClInclude Include="BidijkstraTests.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -133,6 +133,17 @@ a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\clustering.h(75): w
           [
               _Ty=double
           ]
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\bidijkstra.h(98): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\bidijkstra.h(115): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\bidijkstra.h(158): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\bidijkstra.h(172): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\bidijkstra.h(176): warning C4244: '=': conversion from 'llong' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\bidijkstra.h(181): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\bidijkstra.h(185): warning C4018: '<': signed/unsigned mismatch
 c:\program files (x86)\microsoft visual studio\2017\professional\vc\tools\msvc\14.16.27023\include\utility(239): warning C4244: 'initializing': conversion from '_Ty' to '_Ty1', possible loss of data
           with
           [
