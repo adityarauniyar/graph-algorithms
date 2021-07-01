@@ -155,9 +155,12 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AStar.h" />
+    <ClInclude Include="BiAStar.h" />
     <ClInclude Include="Bipartite.h" />
     <ClInclude Include="Clustering.h" />
     <ClInclude Include="ConnectNodesWithMinCost.h" />
+    <ClInclude Include="Constants.h" />
     <ClInclude Include="DAGStronglyConnected.h" />
     <ClInclude Include="DAGTopologyGraph.h" />
     <ClInclude Include="DetectingAnomalies.h" />

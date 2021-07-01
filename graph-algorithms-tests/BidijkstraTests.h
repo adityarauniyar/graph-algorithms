@@ -27,7 +27,7 @@
 
 TEST(BidijkstraTests, CASE_1) {
 	int n;
-	Adj AdjListWithCost(2);
+	DoubleAdj AdjListWithCost(2);
 	std::vector<std::pair<int, int>> Queries;
 	std::istringstream inputStrm("2 1 1 2 1 4 1 1 2 2 1 2 2 1");
 	inputToVars(inputStrm, n, AdjListWithCost, Queries);
@@ -40,7 +40,7 @@ TEST(BidijkstraTests, CASE_1) {
 
 TEST(BidijkstraTests, CASE_2) {
 	int n;
-	Adj AdjListWithCost(2);
+	DoubleAdj AdjListWithCost(2);
 	std::vector<std::pair<int, int>> Queries;
 	std::istringstream inputStrm("4 4 1 2 1 4 1 2 2 3 2 1 3 5 1 1 3");
 	inputToVars(inputStrm, n, AdjListWithCost, Queries);
@@ -53,7 +53,7 @@ TEST(BidijkstraTests, CASE_2) {
 
 TEST(BidijkstraTests, CASE_3) {
 	int n;
-	Adj AdjListWithCost(2);
+	DoubleAdj AdjListWithCost(2);
 	std::vector<std::pair<int, int>> Queries;
 	std::istringstream inputStrm("5 20 1 2 667 1 3 677 1 4 700 1 5 622 2 1 118 2 3 325 2 4 784 2 5 11 3 1 585 3 2 956 3 4 551 3 5 559 4 1 503 4 2 722 4 3 331 4 5 366 5 1 880 5 2 883 5 3 461 5 4 228 10 1 1 1 2 1 3 1 4 1 5 2 1 2 2 2 3 2 4 2 5");
 	inputToVars(inputStrm, n, AdjListWithCost, Queries);

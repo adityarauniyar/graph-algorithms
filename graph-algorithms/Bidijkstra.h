@@ -25,13 +25,14 @@
 #include <queue>
 #include <limits>
 #include <utility>
+#include "Constants.h"
 
 using namespace std;
 
 // External vector of size 2 - for forward and backward search.
 // Internal 2-dimensional vector is vector of adjacency lists for each node.
 // pair is as (adjacent vertex, distance)
-typedef vector<vector<vector<pair<int,int>>>> Adj;
+typedef vector<vector<vector<pair<int,int>>>> DoubleAdj;
 
 // Distances can grow out of int type
 typedef long long llong;
@@ -40,8 +41,6 @@ typedef long long llong;
 // Each priority queue stores the closest unprocessed node in its head.
 typedef pair<llong, int> QElem;
 typedef vector<priority_queue<QElem, vector<QElem>, greater<QElem>>> Queue;
-
-const llong INF = numeric_limits<llong>::max() / 4;
 
 namespace Adv {
 
@@ -53,7 +52,7 @@ namespace Adv {
 		// Graphs are stored as vectors of adjacency lists corresponding
 		// to nodes.
 		// Adjacency list itself is stored in adj_ with (Adj Vertex, Cost) pair.
-		Adj adj_;
+		DoubleAdj adj_;
 		// distance_[0] stores distances for the forward search,
 		// and distance_[1] stores distances for the backward search.
 		vector<vector<llong>> distance_;
@@ -64,7 +63,7 @@ namespace Adv {
 		vector<bool> visited_;
 
 	public:
-		Bidijkstra(int, Adj);
+		Bidijkstra(int, DoubleAdj);
 
 		// Initialize the data structures before new query,
 		// clear the changes made by the previous query.
@@ -88,7 +87,7 @@ namespace Adv {
 
 }
 
-Adv::Bidijkstra::Bidijkstra(int n, Adj adj)
+Adv::Bidijkstra::Bidijkstra(int n, DoubleAdj adj)
 	: n_(n+1), adj_(adj), distance_(2, vector<llong>(n + 1, INF)), visited_(n + 1)
 {
 	workset_.reserve(n + 1);

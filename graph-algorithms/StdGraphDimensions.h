@@ -10,7 +10,8 @@
 
 
 typedef long long llong;
-typedef std::vector<std::vector<llong>> TDVector;
+typedef std::vector<std::vector<llong>> TDLlongVector;
+typedef std::vector<std::vector<int>> TDVector;
 typedef std::vector<std::pair<int, int>> VectorOfPairs;
 
 
@@ -26,14 +27,25 @@ class StandardGraphClass
 		const bool isDirected;
 	public:
 		void static StdGraphInputs(int &n, int &m, VectorOfPairs &EdgeList);
-		void static StdGraphInputsWithWts(int &numVertices, int &numEdges, TDVector &EdgeListWithWts);
-		void static StdGraphInputsWithWts(int &numVertices, int &numEdges, TDVector &EdgeListWithWts, int &Start);
-		void static StdGraphInputsWithWts(int &numVertices, int &numEdges, TDVector &EdgeListWithWts, int &Start, int &End);
+		void static StdGraphInputsWithWts(int &numVertices, int &numEdges, TDLlongVector &EdgeListWithWts);
+		void static StdGraphInputsWithWts(int &numVertices, int &numEdges, TDLlongVector &EdgeListWithWts, int &Start);
+		void static StdGraphInputsWithWts(int &numVertices, int &numEdges, TDLlongVector &EdgeListWithWts, int &Start, int &End);
 		StandardGraphClass(int n, int m) : n(n), m(m), isDirected(false) {}
-		StandardGraphClass(const int &numVertex, const int &numEdges, const TDVector &EdgeListWithWts, const bool isDirected);
-		StandardGraphClass(const int &numVertex, const int &numEdges, const TDVector &EdgeListWithWts, const bool isDirected, const int &start);
+		StandardGraphClass(const int &numVertex, const int &numEdges, const TDLlongVector &EdgeListWithWts, const bool isDirected);
+		StandardGraphClass(const int &numVertex, const int &numEdges, const TDLlongVector &EdgeListWithWts, const bool isDirected, const int &start);
+		StandardGraphClass(const int &numVertex, const int &numEdges, const TDLlongVector &EdgeListWithWts, const bool isDirected, const int &start, const int &End);
 		StandardGraphClass(const int &numVertex, const int &numEdges, const TDVector &EdgeListWithWts, const bool isDirected, const int &start, const int &End);
 };
+
+StandardGraphClass::StandardGraphClass(const int &numVertex, const int &numEdges, const TDLlongVector &EdgeListWithWts, const bool isDirected,  const int &Start, const int &End)
+	:n(numVertex), m(numEdges), StartVertex(Start), EndVertex(End), isDirected(isDirected) {
+	
+	for (int i = 0; i < numEdges; i++) {
+		AdjacencyListWithWeights[EdgeListWithWts[i][0]].push_back(std::make_pair((int)EdgeListWithWts[i][1], EdgeListWithWts[i][2]));
+		if (!isDirected)
+			AdjacencyListWithWeights[EdgeListWithWts[i][1]].push_back(std::make_pair((int)EdgeListWithWts[i][0], EdgeListWithWts[i][2]));
+	}
+}
 
 StandardGraphClass::StandardGraphClass(const int &numVertex, const int &numEdges, const TDVector &EdgeListWithWts, const bool isDirected,  const int &Start, const int &End)
 	:n(numVertex), m(numEdges), StartVertex(Start), EndVertex(End), isDirected(isDirected) {
@@ -45,7 +57,7 @@ StandardGraphClass::StandardGraphClass(const int &numVertex, const int &numEdges
 	}
 }
 
-StandardGraphClass::StandardGraphClass(const int &numVertex, const int &numEdges, const TDVector &EdgeListWithWts, const bool isDirected, const int &Start)
+StandardGraphClass::StandardGraphClass(const int &numVertex, const int &numEdges, const TDLlongVector &EdgeListWithWts, const bool isDirected, const int &Start)
 	:n(numVertex), m(numEdges), StartVertex(Start), isDirected(isDirected) {
 
 	for (int i = 0; i < numEdges; i++) {
@@ -55,7 +67,7 @@ StandardGraphClass::StandardGraphClass(const int &numVertex, const int &numEdges
 	}
 }
 
-StandardGraphClass::StandardGraphClass(const int &numVertex, const int &numEdges, const TDVector &EdgeListWithWts, const bool isDirected)
+StandardGraphClass::StandardGraphClass(const int &numVertex, const int &numEdges, const TDLlongVector &EdgeListWithWts, const bool isDirected)
 	:n(numVertex), m(numEdges), isDirected(isDirected) {
 
 	for (int i = 0; i < numEdges; i++) {
@@ -78,7 +90,7 @@ void StandardGraphClass::StdGraphInputs(int &numVertices, int &numEdges, VectorO
 	}
 }
 
-void StandardGraphClass::StdGraphInputsWithWts(int &numVertices, int &numEdges, TDVector &EdgeListWithWts, int &Start, int &End) {
+void StandardGraphClass::StdGraphInputsWithWts(int &numVertices, int &numEdges, TDLlongVector &EdgeListWithWts, int &Start, int &End) {
 	std::cout << "Enter (numVertices'vc' numEdges'ec'): ";
 	std::cin >> numVertices >> numEdges;
 
@@ -95,7 +107,7 @@ void StandardGraphClass::StdGraphInputsWithWts(int &numVertices, int &numEdges, 
 	std::cin >> Start >> End;
 }
 
-void StandardGraphClass::StdGraphInputsWithWts(int &numVertices, int &numEdges, TDVector &EdgeListWithWts, int &Start) {
+void StandardGraphClass::StdGraphInputsWithWts(int &numVertices, int &numEdges, TDLlongVector &EdgeListWithWts, int &Start) {
 	std::cout << "Enter (numVertices'vc' numEdges'ec'): ";
 	std::cin >> numVertices >> numEdges;
 
@@ -112,7 +124,7 @@ void StandardGraphClass::StdGraphInputsWithWts(int &numVertices, int &numEdges, 
 	std::cin >> Start;
 }
 
-void StandardGraphClass::StdGraphInputsWithWts(int &numVertices, int &numEdges, TDVector &EdgeListWithWts) {
+void StandardGraphClass::StdGraphInputsWithWts(int &numVertices, int &numEdges, TDLlongVector &EdgeListWithWts) {
 	std::cout << "Enter (numVertices'vc' numEdges'ec'): ";
 	std::cin >> numVertices >> numEdges;
 

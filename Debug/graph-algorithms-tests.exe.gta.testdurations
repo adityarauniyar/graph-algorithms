@@ -8,7 +8,7 @@
     <TestDuration Test="ExploreTillMetTests.isReachable_should_be_false_for_sparsely_unlinked_vertices" Duration="1" />
     <TestDuration Test="ExploreConnectedGraphsTests.ConnectedGraphs_be_two_for_densely_linked_vertices" Duration="1" />
     <TestDuration Test="ExploreConnectedGraphsTests.ConnectedGraphs_be_four_for_sparsely_unlinked_vertices" Duration="1" />
-    <TestDuration Test="ExploreConnectedGraphsTests.ConnectedGraphs_be_one_for_densely_linked_vertices" Duration="2" />
+    <TestDuration Test="ExploreConnectedGraphsTests.ConnectedGraphs_be_one_for_densely_linked_vertices" Duration="1" />
     <TestDuration Test="ExploreConnectedGraphsTests.ConnectedGraphs_be_two_for_sparsely_unlinked_vertices" Duration="1" />
     <TestDuration Test="ExploreConnectedGraphsTests.ConnectedGraphs_be_four_for_totaly_sparsed_unlinked_vertices" Duration="1" />
     <TestDuration Test="ExploreTillMetTests.isReachable_should_be_true_for_large_dense_linked_vertices" Duration="2" />
@@ -50,7 +50,7 @@
     <TestDuration Test="DAGStronglyConnectedTests.CASE_4" Duration="1" />
     <TestDuration Test="DAGStronglyConnectedTests.CASE_5" Duration="1" />
     <TestDuration Test="DAGStronglyConnectedTests.CASE_6" Duration="1" />
-    <TestDuration Test="DAGStronglyConnectedTests.CASE_7" Duration="87" />
+    <TestDuration Test="DAGStronglyConnectedTests.CASE_7" Duration="85" />
     <TestDuration Test="DAGStronglyConnectedTests.CASE_8" Duration="1" />
     <TestDuration Test="DAGStronglyConnectedTests.CASE_9" Duration="1" />
     <TestDuration Test="MinEdgePathTests.CASE_1" Duration="1" />
@@ -59,7 +59,7 @@
     <TestDuration Test="MinEdgePathTests.CASE_4" Duration="1" />
     <TestDuration Test="MinEdgePathTests.CASE_5" Duration="1" />
     <TestDuration Test="MinEdgePathTests.CASE_6" Duration="1" />
-    <TestDuration Test="MinEdgePathTests.Stress_Test" Duration="72451" />
+    <TestDuration Test="MinEdgePathTests.Stress_Test" Duration="75043" />
     <TestDuration Test="BipartiteTests.Stress_Test" Duration="72867" />
     <TestDuration Test="BipartiteTests.CASE_1" Duration="1" />
     <TestDuration Test="BipartiteTests.CASE_2" Duration="1" />
@@ -113,7 +113,7 @@
     <TestDuration Test="ShortestPathsTests.CASE_17" Duration="1" />
     <TestDuration Test="ShortestPathsTests.CASE_18" Duration="1" />
     <TestDuration Test="ShortestPathsTests.CASE_19" Duration="1" />
-    <TestDuration Test="ConnectNodesWithMinCostTests.CASE_1" Duration="2" />
+    <TestDuration Test="ConnectNodesWithMinCostTests.CASE_1" Duration="1" />
     <TestDuration Test="ConnectNodesWithMinCostTests.CASE_2" Duration="1" />
     <TestDuration Test="ConnectNodesWithMinCostTests.CASE_3" Duration="1" />
     <TestDuration Test="ConnectNodesWithMinCostTests.CASE_4" Duration="1" />
@@ -124,5 +124,15 @@
     <TestDuration Test="BidijkstraTests.CASE_1" Duration="1" />
     <TestDuration Test="BidijkstraTests.CASE_2" Duration="1" />
     <TestDuration Test="BidijkstraTests.CASE_3" Duration="1" />
+    <TestDuration Test="AStarTests.CASE_1" Duration="1" />
+    <TestDuration Test="AStarTests.CASE_2" Duration="1" />
+    <TestDuration Test="AStarTests.CASE_3" Duration="3" />
+    <TestDuration Test="AStarTests.CASE_4" Duration="1" />
+    <TestDuration Test="AStar.Stress_Test" Duration="33651" />
+    <TestDuration Test="AStarTests.Stress_Test" Duration="1703" />
+    <TestDuration Test="BiAStarTests.CASE_1" Duration="1" />
+    <TestDuration Test="BiAStarTests.CASE_2" Duration="1" />
+    <TestDuration Test="BiAStarTests.CASE_3" Duration="1" />
+    <TestDuration Test="BiAStarTests.Stress_Test" Duration="1710" />
   </TestDurations>
 </GtaTestDurations>

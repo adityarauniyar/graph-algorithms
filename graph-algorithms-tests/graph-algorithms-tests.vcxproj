@@ -34,6 +34,8 @@
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
     <ClInclude Include="AssertArray.h" />
+    <ClInclude Include="AStarTests.h" />
+    <ClInclude Include="BiAStarTests.h" />
     <ClInclude Include="BipartiteTests.h" />
     <ClInclude Include="ClusteringTests.h" />
     <ClInclude Include="ConnectNodesWithMinCostTests.h" />

@@ -29,9 +29,8 @@ namespace Adv {
 	public:
 
 		void ComputeDijkstra(void);
-		Dijkstra(int, int, std::vector<std::vector<llong>>, bool, int, int);
+		Dijkstra(int, int, std::vector<std::vector<int>>, bool, int, int);
 		llong GetDijkstraDistance() { return (DijkstraDistance[EndVertex]== LLONG_MAX) ? -1 : DijkstraDistance[EndVertex]; }
-		Dijkstra static Input();
 	};
 
 }
@@ -58,7 +57,7 @@ void Adv::Dijkstra::ComputeDijkstra() {
 	}
 }
 
-Adv::Dijkstra::Dijkstra(int n, int m, std::vector<std::vector<llong>> EdgeListWithWeights,const bool isDirected, int u, int v)
+Adv::Dijkstra::Dijkstra(int n, int m, std::vector<std::vector<int>> EdgeListWithWeights,const bool isDirected, int u, int v)
 	: StandardGraphClass(n, m, EdgeListWithWeights, isDirected, u, v) {
 
 	for (int i = 0; i <=n; i++) {
@@ -68,13 +67,4 @@ Adv::Dijkstra::Dijkstra(int n, int m, std::vector<std::vector<llong>> EdgeListWi
 	}
 
 	ComputeDijkstra();
-}
-
-Adv::Dijkstra Adv::Dijkstra::Input() {
-	int n, m, Start, End;
-	std::vector<std::vector<llong>> EdgeList;
-
-	StdGraphInputsWithWts(n, m, EdgeList, Start, End);
-
-	return Adv::Dijkstra(n, m, EdgeList, true, Start, End);
 }

@@ -23,7 +23,7 @@
 
 TEST(DijkstraTests, CASE_1) {
 	int n, m, u, v;
-	std::vector<std::vector<llong>> EdgeList;
+	std::vector<std::vector<int>> EdgeList;
 	std::istringstream inputStrm("4 4 1 2 1 4 1 2 2 3 2 1 3 5 1 3");
 	inputToVars(inputStrm, n, m, EdgeList, u, v);
 
@@ -34,7 +34,7 @@ TEST(DijkstraTests, CASE_1) {
 
 TEST(DijkstraTests, CASE_2) {
 	int n, m, u, v;
-	std::vector<std::vector<llong>> EdgeList;
+	std::vector<std::vector<int>> EdgeList;
 	std::istringstream inputStrm("5 9 1 2 4 1 3 2 2 3 2 3 2 1 2 4 2 3 5 4 5 4 1 2 5 3 3 4 4 1 5");
 	inputToVars(inputStrm, n, m, EdgeList, u, v);
 
@@ -45,7 +45,7 @@ TEST(DijkstraTests, CASE_2) {
 
 TEST(DijkstraTests, CASE_3) {
 	int n, m, u, v;
-	std::vector<std::vector<llong>> EdgeList;
+	std::vector<std::vector<int>> EdgeList;
 	std::istringstream inputStrm("3 3 1 2 7 1 3 5 2 3 2 3 2");
 	inputToVars(inputStrm, n, m, EdgeList, u, v);
 
@@ -56,7 +56,7 @@ TEST(DijkstraTests, CASE_3) {
 
 TEST(DijkstraTests, CASE_4) {
 	int n, m, u, v;
-	std::vector<std::vector<llong>> EdgeList;
+	std::vector<std::vector<int>> EdgeList;
 	std::istringstream inputStrm("10 9 1 2 1 5 6 1 6 7 1 8 9 1 9 10 1 3 4 1 7 8 1 4 5 1 2 3 1 1 10");
 	inputToVars(inputStrm, n, m, EdgeList, u, v);
 
@@ -67,7 +67,7 @@ TEST(DijkstraTests, CASE_4) {
 
 TEST(DijkstraTests, CASE_5) {
 	int n, m, u, v;
-	std::vector<std::vector<llong>> EdgeList;
+	std::vector<std::vector<int>> EdgeList;
 	std::istringstream inputStrm("5 10 3 5 49438153 2 3 78072041 3 4 12409612 1 3 88526216 5 2 6876525 1 4 28703032 4 1 24629785 4 5 96300300 4 3 317823 2 5 22632987 4 2");
 	inputToVars(inputStrm, n, m, EdgeList, u, v);
 

@@ -2,6 +2,7 @@
 #include<iostream>
 #include<vector>
 #include<algorithm>
+#include "..\graph-algorithms\Constants.h"
 
 
 void GenerateGraphs(std::pair<int, int> numVertex_MinMax, std::pair<int, int> numEdges_MinMax, int &numVertex, int &numEdges, std::vector<std::pair<int, int>> &EdgeList, int &startVertex, int &endVertex) {
@@ -64,4 +65,68 @@ std::vector<std::vector<int>> GenerateFloydWarshallMatrix(const std::vector<std:
 				}
 
 	return FloydWarshallMatrix;
+}
+
+// Generates Edge List with weights. 
+void GenerateGraphs(std::pair<int, int> numVertex_MinMax, std::pair<int, int> numEdges_MinMax, std::pair<int, int> wt_MinMax, int &numVertex, int &numEdges, std::vector<std::vector<int>> &EdgeListWithWt, int &startVertex, int &endVertex) {
+	numVertex = rand() % (numVertex_MinMax.second - numVertex_MinMax.first + 1) + numVertex_MinMax.first;
+	numEdges = rand() % (numEdges_MinMax.second - numEdges_MinMax.first + 1) + numEdges_MinMax.first;
+
+	for (int i = 0; EdgeListWithWt.size() <= numEdges; i++) {
+		int v1 = rand() % (numVertex)+1,
+			v2 = rand() % (numVertex)+1,
+			wt = rand() % (wt_MinMax.second - wt_MinMax.first + 1) + wt_MinMax.first;
+
+		if (v1 <= numVertex && v2 <= numVertex)
+			EdgeListWithWt.push_back({ v1,v2,wt });
+	}
+
+	startVertex = rand() % (numVertex)+1;
+	endVertex = rand() % (numVertex)+1;
+}
+
+// Generates Bidirectional Adjacency list from list of Edges as input.
+DoubleAdj GenerateBiDirectionAdjList(const int& n, const std::vector<std::vector<int>>& EdgelistWithWt) {
+
+	DoubleAdj BiDirAdjList(2, std::vector<std::vector<std::pair<int, int>>>(n + 1));
+
+	for (int i = 0; i< EdgelistWithWt.size(); i++) {
+		int v1 = EdgelistWithWt[i][0],
+			v2 = EdgelistWithWt[i][1],
+			cost = EdgelistWithWt[i][2];
+		BiDirAdjList[0][v1].push_back(std::make_pair(v2, cost));
+		BiDirAdjList[1][v2].push_back(std::make_pair(v1, cost));
+	}
+
+	return BiDirAdjList;
+}
+
+// Generates Bidirectional Adjacency list from list of Edges as input.
+Adj GenerateAdjList(const int& n, const std::vector<std::vector<int>>& EdgelistWithWt) {
+
+	Adj AdjList(n + 1);
+
+	for (int i = 0; i< EdgelistWithWt.size(); i++) {
+		int v1 = EdgelistWithWt[i][0],
+			v2 = EdgelistWithWt[i][1],
+			cost = EdgelistWithWt[i][2];
+		AdjList[v1].push_back(std::make_pair(v2, cost));
+	}
+
+	return AdjList;
+}
+
+// Generate randin coordinate points for 'n' nodes within coordinate range
+std::vector<std::pair<llong, llong>> GenerateCoordinates(const int& n, std::pair<int, int> coordinates_MinMax) {
+
+	std::vector<std::pair<llong, llong>> xy(n+1);
+
+	for (int i = 1; i < xy.size(); i++) {
+		llong c1 = rand() % (coordinates_MinMax.second - coordinates_MinMax.first + 1) + coordinates_MinMax.first,
+			c2 = rand() % (coordinates_MinMax.second - coordinates_MinMax.first + 1) + coordinates_MinMax.first;
+		xy[i] = make_pair(c1, c2);
+	}
+
+	return xy;
+
 }

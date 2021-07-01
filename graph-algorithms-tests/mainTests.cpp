@@ -13,6 +13,8 @@
 #include "ConnectNodesWithMinCostTests.h"
 #include "ClusteringTests.h"
 #include "BidijkstraTests.h"
+#include "BiAStarTests.h"
+#include "AStarTests.h"
 
 int main(int argc, char **argv)
 {
