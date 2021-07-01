@@ -14,3 +14,5 @@ Top Graph-algorithms include:
 - A*
 - Bidirectional A*
 - Contraction hierarchies
+
+Report for any bug.
