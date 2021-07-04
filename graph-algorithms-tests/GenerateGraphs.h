@@ -77,7 +77,7 @@ void GenerateGraphs(std::pair<int, int> numVertex_MinMax, std::pair<int, int> nu
 			v2 = rand() % (numVertex)+1,
 			wt = rand() % (wt_MinMax.second - wt_MinMax.first + 1) + wt_MinMax.first;
 
-		if (v1 <= numVertex && v2 <= numVertex)
+		if (v1 <= numVertex && v2 <= numVertex && v1!=v2)
 			EdgeListWithWt.push_back({ v1,v2,wt });
 	}
 
@@ -129,4 +129,30 @@ std::vector<std::pair<llong, llong>> GenerateCoordinates(const int& n, std::pair
 
 	return xy;
 
+}
+
+void convertDoubleAdjToMapAdj(DoubleAdjMapList& adj1, DoubleAdj& adj2) {
+	for (int i = 0; i < adj2.size(); i++) {
+		for (int j = 1; j < adj2[i].size(); j++) {
+			for (int k = 1; k < adj2[i][j].size(); k++) {
+				int v = adj2[i][j][k].first;
+				llong cost = adj2[i][j][k].second;
+				adj1[i][j][v] = cost;
+			}
+		}
+	}
+}
+
+void convertAdjToDoubleMapAdj(Adj& adj2, DoubleAdjMapList& adj1) {
+	
+	for (int j = 1; j < adj2.size(); j++) {
+		for (int k = 0; k < adj2[j].size(); k++) {
+			int v = adj2[j][k].first;
+			llong cost = adj2[j][k].second;
+			if (!adj1[0][j].count(v) || adj1[0][j][v]>cost)
+				adj1[0][j][v] = cost;
+			if (!adj1[1][v].count(j) || adj1[1][v][j] > cost)
+				adj1[1][v][j] = cost;
+		}
+	}
 }

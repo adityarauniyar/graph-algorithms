@@ -39,6 +39,7 @@
     <ClInclude Include="BipartiteTests.h" />
     <ClInclude Include="ClusteringTests.h" />
     <ClInclude Include="ConnectNodesWithMinCostTests.h" />
+    <ClInclude Include="ContractionHierarchiesTests.h" />
     <ClInclude Include="DAGStronglyConnectedTests.h" />
     <ClInclude Include="DAGTopologyGraphTests.h" />
     <ClInclude Include="DetectingAnomaliesTests.h" />

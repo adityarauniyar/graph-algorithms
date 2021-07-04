@@ -33,8 +33,6 @@ typedef long long llong;
 
 // Vector of two priority Qs - for forward and backward searches.
 // Each priority Q stores the closest unprocessed node in its head.
-typedef pair<llong, int> QElem;
-typedef priority_queue<QElem, vector<QElem>, greater<QElem>> Q;
 
 namespace Adv {
 

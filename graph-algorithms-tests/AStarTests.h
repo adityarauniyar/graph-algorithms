@@ -25,7 +25,7 @@
 // --------------------- UNIT TESTS --------------------- //
 
 
-// Stress Test with Bidirectional Dijkstra
+// Stress Test with Dijkstra
 TEST(AStarTests, Stress_Test) {
 	//const std::pair<int, int> numVertex_MinMax = { 1, 1.1e5 };
 	//const std::pair<int, int> numEdges_MinMax = { 1 , 2.5e5 };

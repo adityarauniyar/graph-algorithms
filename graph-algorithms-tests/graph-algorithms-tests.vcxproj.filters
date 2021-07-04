@@ -60,6 +60,9 @@
     <ClInclude Include="AStarTests.h">
       <Filter>Tests</Filter>
     </ClInclude>
+    <ClInclude Include="ContractionHierarchiesTests.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

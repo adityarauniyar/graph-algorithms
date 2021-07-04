@@ -15,6 +15,7 @@
 #include "BidijkstraTests.h"
 #include "BiAStarTests.h"
 #include "AStarTests.h"
+#include "ContractionHierarchiesTests.h"
 
 int main(int argc, char **argv)
 {

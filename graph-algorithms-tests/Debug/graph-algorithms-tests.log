@@ -55,6 +55,11 @@ a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\generategraph
 a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\generategraphs.h(93): warning C4018: '<': signed/unsigned mismatch
 a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\generategraphs.h(109): warning C4018: '<': signed/unsigned mismatch
 a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\generategraphs.h(124): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\generategraphs.h(135): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\generategraphs.h(136): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\generategraphs.h(137): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\generategraphs.h(148): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\generategraphs.h(149): warning C4018: '<': signed/unsigned mismatch
 a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\minedgepathtests.h(38): warning C4018: '>': signed/unsigned mismatch
 a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\bipartite.h(44): warning C4018: '<': signed/unsigned mismatch
 a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\bipartite.h(62): warning C4018: '<': signed/unsigned mismatch
@@ -180,9 +185,19 @@ a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\biastar.h(188): war
           ]
 a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\biastar.h(193): warning C4018: '<': signed/unsigned mismatch
 a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\biastar.h(197): warning C4018: '<': signed/unsigned mismatch
-a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\astar.h(95): warning C4018: '<': signed/unsigned mismatch
-a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\astar.h(104): warning C4244: 'return': conversion from 'double' to 'llong', possible loss of data
-a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\astar.h(144): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\astar.h(93): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\astar.h(102): warning C4244: 'return': conversion from 'double' to 'llong', possible loss of data
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\astar.h(142): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\astar.h(148): warning C4244: 'initializing': conversion from '_Ty1' to 'int', possible loss of data
+          with
+          [
+              _Ty1=llong
+          ]
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\astar.h(149): warning C4244: 'initializing': conversion from '_Ty2' to 'int', possible loss of data
+          with
+          [
+              _Ty2=llong
+          ]
 a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\astar.h(150): warning C4244: 'initializing': conversion from '_Ty1' to 'int', possible loss of data
           with
           [
@@ -193,24 +208,25 @@ a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\astar.h(151): warni
           [
               _Ty2=llong
           ]
-a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\astar.h(152): warning C4244: 'initializing': conversion from '_Ty1' to 'int', possible loss of data
-          with
-          [
-              _Ty1=llong
-          ]
-a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\astar.h(153): warning C4244: 'initializing': conversion from '_Ty2' to 'int', possible loss of data
-          with
-          [
-              _Ty2=llong
-          ]
-a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\astar.h(168): warning C4018: '<': signed/unsigned mismatch
-a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\astar.h(172): warning C4244: '=': conversion from 'llong' to '_Ty', possible loss of data
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\astar.h(166): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\astar.h(170): warning C4244: '=': conversion from 'llong' to '_Ty', possible loss of data
           with
           [
               _Ty=int
           ]
-a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\astar.h(177): warning C4018: '<': signed/unsigned mismatch
-a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\astar.h(181): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\astar.h(175): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\astar.h(179): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\contractionhierarchies.h(116): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\contractionhierarchies.h(129): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\contractionhierarchies.h(132): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\contractionhierarchies.h(301): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\contractionhierarchies.h(305): warning C4244: '=': conversion from 'llong' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\contractionhierarchies.h(310): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\contractionhierarchies.h(314): warning C4018: '<': signed/unsigned mismatch
 c:\program files (x86)\microsoft visual studio\2017\professional\vc\tools\msvc\14.16.27023\include\utility(239): warning C4244: 'initializing': conversion from '_Ty' to '_Ty1', possible loss of data
           with
           [
@@ -220,8 +236,29 @@ c:\program files (x86)\microsoft visual studio\2017\professional\vc\tools\msvc\1
           [
               _Ty1=int
           ]
-  a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\dijkstra.h(40): note: see reference to function template instantiation 'std::pair<int,llong>::pair<__int64,int,0>(std::pair<__int64,int> &&) noexcept' being compiled
-  a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\dijkstra.h(40): note: see reference to function template instantiation 'std::pair<int,llong>::pair<__int64,int,0>(std::pair<__int64,int> &&) noexcept' being compiled
+  a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\dijkstra.h(40): note: see reference to function template instantiation 'std::pair<int,llong>::pair<llong,int,0>(std::pair<llong,int> &&) noexcept' being compiled
+  a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\dijkstra.h(40): note: see reference to function template instantiation 'std::pair<int,llong>::pair<llong,int,0>(std::pair<llong,int> &&) noexcept' being compiled
+c:\program files (x86)\microsoft visual studio\2017\professional\vc\tools\msvc\14.16.27023\include\utility(173): warning C4244: 'initializing': conversion from '_Ty' to '_Ty2', possible loss of data
+          with
+          [
+              _Ty=double
+          ]
+          and
+          [
+              _Ty2=int
+          ]
+  a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\contractionhierarchiestests.h(42): note: see reference to function template instantiation 'std::pair<int,int>::pair<int,double,0>(_Other1 &&,_Other2 &&) noexcept' being compiled
+          with
+          [
+              _Other1=int,
+              _Other2=double
+          ]
+  a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\contractionhierarchiestests.h(42): note: see reference to function template instantiation 'std::pair<int,int>::pair<int,double,0>(_Other1 &&,_Other2 &&) noexcept' being compiled
+          with
+          [
+              _Other1=int,
+              _Other2=double
+          ]
 a:\coursera\algo on graphs\graph-algorithms\packages\microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.0\build\native\include\gtest\gtest.h(1392): warning C4805: '==': unsafe mix of type 'const T1' and type 'const T2' in operation
           with
           [

@@ -72,6 +72,9 @@
     <ClInclude Include="AStar.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ContractionHierarchies.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">

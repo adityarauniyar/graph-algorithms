@@ -157,6 +157,34 @@ void inputToVars(std::istringstream &input, int &n, FwdAndRevAdjWithCost& Adj, s
 
 }
 
+// Reading and creating: forward and reverese adjacency list + reading the Queries in a map type Adj List
+void inputToVars(std::istringstream &input, int &n, DoubleAdjMapList& Adj, std::vector<std::pair<int, int>>& Queries) {
+
+	int numEdges;
+	
+	input >> n;
+	input >> numEdges;
+
+	for (int i = 0; i < numEdges; i++) {
+		int v1, v2, cost;
+		input >> v1;
+		input >> v2;
+		input >> cost; 
+		Adj[0][v1][v2] = cost;
+		Adj[1][v2][v1] = cost;
+	}
+
+	int numQueries;
+	input >> numQueries;
+	for (int i = 0; i < numQueries; i++) {
+		int u, v;
+		input >> u;
+		input >> v;
+		Queries.push_back({ u,v });
+	}
+
+}
+
 // Reading coordinates of each node and creating: forward and reverese adjacency list + reading the Queries
 void inputToVars(std::istringstream &input, int &n, std::vector<std::pair<llong, llong>>& xy, FwdAndRevAdjWithCost& Adj, std::vector<std::pair<int, int>>& Queries) {
 

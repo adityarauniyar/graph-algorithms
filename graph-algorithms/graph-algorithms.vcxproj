@@ -161,6 +161,7 @@
     <ClInclude Include="Clustering.h" />
     <ClInclude Include="ConnectNodesWithMinCost.h" />
     <ClInclude Include="Constants.h" />
+    <ClInclude Include="ContractionHierarchies.h" />
     <ClInclude Include="DAGStronglyConnected.h" />
     <ClInclude Include="DAGTopologyGraph.h" />
     <ClInclude Include="DetectingAnomalies.h" />
