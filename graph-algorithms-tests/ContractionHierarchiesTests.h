@@ -37,7 +37,7 @@
 
 
 // Stress Test with Dijkstra
-TEST(ContractionHierarchiesTests, Stress_Test) {
+TEST(DISABLED_ContractionHierarchiesTests, Stress_Test) {
 
 	const std::pair<int, int> numVertex_MinMax = { 1, 1.1e5 };
 	const std::pair<int, int> numEdges_MinMax = { 1 , 2.5e5 };
@@ -76,8 +76,6 @@ TEST(ContractionHierarchiesTests, Stress_Test) {
 	}
 
 }
-
-
 
 // --------------------- UNIT TESTS --------------------- //
 TEST(ContractionHierarchiesTests, CASE_1) {
@@ -130,4 +128,32 @@ TEST(ContractionHierarchiesTests, CASE_4) {
 	string ActualResult = CH.query(Queries);
 
 	EXPECT_EQ("8", ActualResult);
+}
+
+// Testing the loop exit when loop stage > hopsLimit
+TEST(ContractionHierarchiesTests, CASE_5) {
+	int n;
+	DoubleAdjMapList adj;
+	std::vector<std::pair<int, int>> Queries;
+	std::istringstream inputStrm("6 6 2 1 2 1 3 2 2 4 1 4 5 1 5 6 1 6 3 1 1 2 3");
+	inputToVars(inputStrm, n, adj, Queries);
+
+	Adv::ContractionHierarchies CH(n, adj);
+	string ActualResult = CH.query(Queries);
+
+	EXPECT_EQ("4", ActualResult);
+}
+
+// Testing the loop exit when loop dist > len(1,2) + len(1,3) - minEdgefrom "3"
+TEST(ContractionHierarchiesTests, CASE_6) {
+	int n;
+	DoubleAdjMapList adj;
+	std::vector<std::pair<int, int>> Queries;
+	std::istringstream inputStrm("6 6 2 1 2 1 3 2 2 4 2 4 5 2 5 6 2 6 3 2 1 2 3");
+	inputToVars(inputStrm, n, adj, Queries);
+
+	Adv::ContractionHierarchies CH(n, adj);
+	string ActualResult = CH.query(Queries);
+
+	EXPECT_EQ("4", ActualResult);
 }

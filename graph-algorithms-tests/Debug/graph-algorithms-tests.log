@@ -216,17 +216,21 @@ a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\astar.h(170): warni
           ]
 a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\astar.h(175): warning C4018: '<': signed/unsigned mismatch
 a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\astar.h(179): warning C4018: '<': signed/unsigned mismatch
-a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\contractionhierarchies.h(116): warning C4018: '<': signed/unsigned mismatch
-a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\contractionhierarchies.h(129): warning C4018: '<': signed/unsigned mismatch
-a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\contractionhierarchies.h(132): warning C4018: '<': signed/unsigned mismatch
-a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\contractionhierarchies.h(301): warning C4018: '<': signed/unsigned mismatch
-a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\contractionhierarchies.h(305): warning C4244: '=': conversion from 'llong' to '_Ty', possible loss of data
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\contractionhierarchies.h(130): warning C4244: 'initializing': conversion from '_Ty2' to 'int', possible loss of data
+          with
+          [
+              _Ty2=llong
+          ]
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\contractionhierarchies.h(141): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\contractionhierarchies.h(151): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\contractionhierarchies.h(379): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\contractionhierarchies.h(383): warning C4244: '=': conversion from 'llong' to '_Ty', possible loss of data
           with
           [
               _Ty=int
           ]
-a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\contractionhierarchies.h(310): warning C4018: '<': signed/unsigned mismatch
-a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\contractionhierarchies.h(314): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\contractionhierarchies.h(388): warning C4018: '<': signed/unsigned mismatch
+a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\contractionhierarchies.h(392): warning C4018: '<': signed/unsigned mismatch
 c:\program files (x86)\microsoft visual studio\2017\professional\vc\tools\msvc\14.16.27023\include\utility(239): warning C4244: 'initializing': conversion from '_Ty' to '_Ty1', possible loss of data
           with
           [

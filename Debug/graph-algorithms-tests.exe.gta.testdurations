@@ -32,7 +32,7 @@
     <TestDuration Test="DAGTopologyGraphTests.Case_1" Duration="1" />
     <TestDuration Test="DAGTopologyGraphTests.Case_2" Duration="1" />
     <TestDuration Test="DAGTopologyGraphTests.Case_3" Duration="1" />
-    <TestDuration Test="DAGTopologyGraphTests.Case_4" Duration="2" />
+    <TestDuration Test="DAGTopologyGraphTests.Case_4" Duration="3" />
     <TestDuration Test="DAGTopologyGraphTests.Case_5" Duration="1" />
     <TestDuration Test="DAGTopologyGraphTests.Case_6" Duration="1" />
     <TestDuration Test="DAGTopologyGraphTests.Case_7" Duration="1" />
@@ -50,7 +50,7 @@
     <TestDuration Test="DAGStronglyConnectedTests.CASE_4" Duration="1" />
     <TestDuration Test="DAGStronglyConnectedTests.CASE_5" Duration="1" />
     <TestDuration Test="DAGStronglyConnectedTests.CASE_6" Duration="1" />
-    <TestDuration Test="DAGStronglyConnectedTests.CASE_7" Duration="93" />
+    <TestDuration Test="DAGStronglyConnectedTests.CASE_7" Duration="106" />
     <TestDuration Test="DAGStronglyConnectedTests.CASE_8" Duration="1" />
     <TestDuration Test="DAGStronglyConnectedTests.CASE_9" Duration="1" />
     <TestDuration Test="MinEdgePathTests.CASE_1" Duration="1" />
@@ -106,7 +106,7 @@
     <TestDuration Test="ShortestPathsTests.CASE_10" Duration="1" />
     <TestDuration Test="ShortestPathsTests.CASE_11" Duration="1" />
     <TestDuration Test="ShortestPathsTests.CASE_12" Duration="1" />
-    <TestDuration Test="ShortestPathsTests.CASE_13" Duration="10" />
+    <TestDuration Test="ShortestPathsTests.CASE_13" Duration="2" />
     <TestDuration Test="ShortestPathsTests.CASE_14" Duration="1" />
     <TestDuration Test="ShortestPathsTests.CASE_15" Duration="1" />
     <TestDuration Test="ShortestPathsTests.CASE_16" Duration="1" />
@@ -118,7 +118,7 @@
     <TestDuration Test="ConnectNodesWithMinCostTests.CASE_3" Duration="1" />
     <TestDuration Test="ConnectNodesWithMinCostTests.CASE_4" Duration="1" />
     <TestDuration Test="ConnectNodesWithMinCostTests.CASE_5" Duration="1" />
-    <TestDuration Test="ClusteringTests.CASE_1" Duration="1" />
+    <TestDuration Test="ClusteringTests.CASE_1" Duration="2" />
     <TestDuration Test="ClusteringTests.CASE_2" Duration="1" />
     <TestDuration Test="ClusteringTests.CASE_3" Duration="1" />
     <TestDuration Test="BidijkstraTests.CASE_1" Duration="1" />
@@ -126,7 +126,7 @@
     <TestDuration Test="BidijkstraTests.CASE_3" Duration="1" />
     <TestDuration Test="AStarTests.CASE_1" Duration="1" />
     <TestDuration Test="AStarTests.CASE_2" Duration="1" />
-    <TestDuration Test="AStarTests.CASE_3" Duration="3" />
+    <TestDuration Test="AStarTests.CASE_3" Duration="4" />
     <TestDuration Test="AStarTests.CASE_4" Duration="1" />
     <TestDuration Test="AStar.Stress_Test" Duration="33651" />
     <TestDuration Test="AStarTests.Stress_Test" Duration="1611" />
@@ -139,5 +139,7 @@
     <TestDuration Test="ContractionHierarchiesTests.CASE_2" Duration="1" />
     <TestDuration Test="ContractionHierarchiesTests.CASE_3" Duration="1" />
     <TestDuration Test="ContractionHierarchiesTests.CASE_4" Duration="1" />
+    <TestDuration Test="ContractionHierarchiesTests.CASE_5" Duration="1" />
+    <TestDuration Test="ContractionHierarchiesTests.CASE_6" Duration="1" />
   </TestDurations>
 </GtaTestDurations>

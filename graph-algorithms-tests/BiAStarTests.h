@@ -28,7 +28,7 @@
 
 
 // Stress Test with Bidirectional Dijkstra
-TEST(BiAStarTests, Stress_Test) {
+TEST(DISABLED_BiAStarTests, Stress_Test) {
 	//const std::pair<int, int> numVertex_MinMax = { 1, 1.1e5 };
 	//const std::pair<int, int> numEdges_MinMax = { 1 , 2.5e5 };
 	//const std::pair<int, int> wt_MinMax = { 0 , 1e5 };

@@ -5,6 +5,8 @@
 #include <utility>
 #include <map>
 #include "Constants.h"
+#include <iostream>
+#include <string>
 
 // Problem Description
 
@@ -48,33 +50,45 @@ typedef long long llong;
 typedef pair<llong, int> QElem;
 typedef vector<priority_queue<QElem, vector<QElem>, greater<QElem>>> DoubleQ;
 
+
 namespace Adv {
 
 	class ContractionHierarchies {
+
 		// Number of nodes
 		int n_;
-		// Graph adj_[0] and cost_[0] correspond to the initial graph,
-		// adj_[1] and cost_[1] correspond to the reversed graph.
-		// Graphs are stored as vectors of DoubleAdjMapListacency lists corresponding
-		// to nodes.
-		// DoubleAdjMapListacency list itself is stored in adj_ with (DoubleAdjMapList Vertex, Cost) pair.
+		// adj_[0] correspond to the edges in initial graph,
+		// adj_[1] correspond to the edges in reversed graph.
 		DoubleAdjMapList adj_;
-		// weights_ stores distances for the forward search,
-		// and weights_[1] stores distances for the backward search.
+		// weights_[0] stores distances for the forward search,
+		// weights_[1] stores distances for the backward search.
 		vector<vector<llong>> weights_;
 		// Stores all the nodes visited either by forward or backward search.
 		vector<int> workset_;
 		// visited logs for each node
 		vector<bool> visited_;
-		// Contraction order for ndoes during preprocessing.
-		vector<int> nodeContractionOrder_;
-		// Status of whether ndoe is contracted or not; useful while preprocessing 
-		vector<bool> isContracted;
-		// Node Order for each nodes after preprocesssing 
-		vector<int> nodeOrder_;
-		// DoubleAdjMapListacency List of shortcut edges added during preprocesssing
-		DoubleAdjMapList adjWithShortcuts_;
 
+		// Heuristic data items
+		vector<llong> minIncomingEdge_;
+		vector<int> nodeLevel_;
+		int nodeContractionImp_;
+		int shortcutCount_;
+		Q importanceQ;
+		// Node Order for each nodes after preprocesssing 
+		vector<int> rank_;
+
+		// list of shortcuts 
+		struct ShortCut {
+			int v1;
+			int v2;
+			llong dist;
+
+			// ShortCut(int u, int v, llong c) : v1(u), v2(v), dist(c) {}
+		};
+		
+		vector<ShortCut> shortcuts_;
+		bool shouldAddShortcut = false;
+		
 	public:
 		ContractionHierarchies(int, DoubleAdjMapList);
 
@@ -91,12 +105,13 @@ namespace Adv {
 		llong query(int, int);
 		string query(vector<pair<int, int>>);
 
-		// Contraction Hierarchies operations
-		void setNodeContractionOrder();
+		// Contraction Hierarchies operation
+		void initNodeContractionOrder();
 		void preprocess();
 		void contractNode(int&);
-		llong findDijkstraDist(int&, int&, llong&);
-		void addShortcut(int&, int&, llong&, llong&);
+		llong witnessSearch(int&, int&, int&, llong&);
+		void updateNodeLevel(int&);
+		void addShortcut(int&, int&, llong&);
 		void optimizeEdges();
 
 		void process(DoubleQ&, QElem&, int);
@@ -105,9 +120,19 @@ namespace Adv {
 }
 
 Adv::ContractionHierarchies::ContractionHierarchies(int n, DoubleAdjMapList Adj)
-	: n_(n + 1), adj_(Adj), weights_(2, vector<llong>(n_,INF)), visited_(n_, false), nodeOrder_(n_, -1), nodeContractionOrder_(n,-1), isContracted(n_, false)
+	: n_(n + 1), adj_(Adj), weights_(2, vector<llong>(n_,INF)), visited_(n_, false), rank_(n_, INT_MAX), nodeLevel_(n_, 0), shortcuts_(3), minIncomingEdge_(n_, INF)
 {
 	workset_.reserve(n + 1);
+
+	for (auto& node : adj_[1]) {
+		int v = node.first;
+		for (auto& incomingNode : adj_[1][v]) {
+			int uEdgeVal = incomingNode.second;
+			if (minIncomingEdge_[v] > uEdgeVal)
+				minIncomingEdge_[v] = uEdgeVal;
+		}
+	}
+		
 	preprocess();
 	cout << "READY" << endl;
 }
@@ -121,50 +146,39 @@ void Adv::ContractionHierarchies::clear() {
 	workset_.clear();
 }
 
-void Adv::ContractionHierarchies::setNodeContractionOrder() {
-
-	// Set Order at which the node contraction should take place. This would also define its node level.
-	// TODO: set order in such a way that node with min edges gets contracted first and max at last; 
-	//		this would optimize shortcut edge addition.
-	for (int i = 0; i < nodeContractionOrder_.size(); ++i)
-		nodeContractionOrder_[i] = i+1; // +1 since node numbers are from 1 to ...
-	// Defining the node order based on node contraction order.
-	for (int i = 1; i < nodeOrder_.size(); ++i)
-		nodeOrder_[nodeContractionOrder_[i-1]] = i;
+void Adv::ContractionHierarchies::initNodeContractionOrder() {
+	
+	for (int v = 1; v < rank_.size(); ++v) {
+		contractNode(v);
+		importanceQ.push(make_pair(nodeContractionImp_, v));
+	}
+		
 }
 
-llong Adv::ContractionHierarchies::findDijkstraDist(int& u, int& v, llong& cost) {
+llong Adv::ContractionHierarchies::witnessSearch(int& u, int& v, int& w, llong& cost) {
 	// Witness Search using Unidirectional Dijkstra
 	vector<bool> djVisited(n_, false);
 	vector<llong> djWts(n_, INF); 
 
-	vector<int> hopsCounter(n_, 1);
-	int hopsLimit = 1;
+	// limiting the number of loops during while()
+	int hopsLimit = 3;
 
 	djWts[u] = 0;
 	Q q;
 	q.push(make_pair(0, u));
 
-	// Finding the shortest edge to v from NOT contracted nodes.
-	llong finalEdgeAtMin = INF;
-	for (auto& nodeElem : adj_[1][v]) {
-		if (finalEdgeAtMin > nodeElem.second && !isContracted[nodeElem.first])
-			finalEdgeAtMin = nodeElem.second;
-	}
-
 	while (!q.empty() 
-		&& q.top().second != v 
-		&& q.top().first <= (cost-finalEdgeAtMin)
-		&& hopsCounter[q.top().second] <= hopsLimit) {
+		&& q.top().second != w 
+		&& q.top().first <= cost
+		&& hopsLimit--) {
 
 		QElem top = q.top();
 		q.pop();
 		
-		for (auto& itr : adj_[0][u]) {
+		for (auto& itr : adj_[0][top.second]) {
 			int adjVtx = itr.first;
-			if (isContracted[adjVtx])
+			if (adjVtx == v || rank_[adjVtx] <= rank_[v])
 				continue;
-			hopsCounter[adjVtx] = hopsCounter[top.second] + 1;
 			llong adjCost = itr.second;
 			llong costToBe = djWts[top.second] + adjCost;
 			if (djWts[adjVtx] > costToBe) {
@@ -173,71 +187,136 @@ llong Adv::ContractionHierarchies::findDijkstraDist(int& u, int& v, llong& cost)
 			}
 		}
 	}
-
-	return djWts[v];
+	return djWts[w];
 }
 
-void Adv::ContractionHierarchies::addShortcut(int& u, int& w, llong& uCost, llong& wCost) {
+inline void Adv::ContractionHierarchies::addShortcut(int& u, int& w, llong& cost) {
+	
+	adj_[0][u][w] = cost;
+	adj_[1][w][u] = cost;
 
-	llong costToBe = uCost + wCost;
-	if (!adj_[0][u].count(w) || adj_[0][u][w] > costToBe) {
-		llong alternateDist = findDijkstraDist(u, w, costToBe);
-		if (alternateDist > costToBe) {
-			if (nodeOrder_[u] > nodeOrder_[w])
-				adj_[1][w][u] = costToBe;
-			else
-				adj_[0][u][w] = costToBe;
-		}
-	}
 }
 
 void Adv::ContractionHierarchies::contractNode(int& v) {
 
-	isContracted[v] = true;
+	shortcuts_.clear();
+	shortcutCount_ = 0;
+
+	int contractedNeighbourCount = 0;
+	int shortcutCoverCount = 0;
 
 	// u --> v --> w
 	// traversing backward adjacency list
-	for (auto& Backitr : adj_[1][v]) {
-		int u = Backitr.first;
-		llong uCost = Backitr.second;
-		if (!isContracted[u]) {
+	for(auto& BackItr : adj_[1][v]){
+		int u = BackItr.first;
+		llong uCost = BackItr.second;
+
+		int initialShortcuts = shortcutCount_;
+		if (rank_[v] <= rank_[u]) {
 			// Traversing forward list from "v"
 			for (auto& Fwditr : adj_[0][v]) {
 				int w = Fwditr.first;
 				llong wCost = Fwditr.second;
-				if (!isContracted[w] && u != w) {
-					addShortcut(u, w, uCost, wCost);
-					adj_[1][w].erase(v); // removing edges towards lower level from Rev Adj List
+				if (rank_[w] >= rank_[v] && u != w) {
+					llong cost = uCost + wCost;
+					if (!adj_[0][u].count(w) || adj_[0][u][w] > cost) {
+						llong trimmedCost = cost - minIncomingEdge_[w];
+						llong alternateDist = witnessSearch(u, v, w, trimmedCost);
+						if (alternateDist > cost) {
+							shortcutCount_++;
+							if (shouldAddShortcut)
+								shortcuts_.push_back({ u, w, cost });
+						}
+					}
 				}
+				else if (rank_[w] < rank_[v])
+					contractedNeighbourCount++;
 			}
-			adj_[0][u].erase(v); // removing edges towards lower level from Fwd Adj List
+			if (shortcutCount_ > initialShortcuts) // check if any shortcut was added from "u" on contracting "v"
+				shortcutCoverCount++;
 		}
+		else
+			contractedNeighbourCount++;
 	}
-	
+
+	// Setting node Importance value; the lesser the unimportant
+	nodeContractionImp_ = shortcutCount_ - adj_[1][v].size() - adj_[0][v].size() // Edge Difference
+		+ contractedNeighbourCount												 // Contracted Neighbours
+		+ shortcutCoverCount													 // Shortcut Cover
+		+ nodeLevel_[v];														 // Node level value
+}
+
+void Adv::ContractionHierarchies::updateNodeLevel(int& v) {
+	int nodeLevelToBe = nodeLevel_[v] + 1;
+
+	for (auto& outgoing : adj_[0][v]) {
+		nodeLevel_[outgoing.first] = max(nodeLevel_[outgoing.first], nodeLevelToBe);
+	}
+
+	for (auto& incoming : adj_[1][v]) {
+		nodeLevel_[incoming.first] = max(nodeLevel_[incoming.first], nodeLevelToBe);
+	}
 }
 
 void Adv::ContractionHierarchies::optimizeEdges() {
-	
+
+	// removing edges from upper rank vertex to lower rank vertex in reverse Adjacency list
+	for (auto& uElem = adj_[1].begin(); uElem != adj_[1].end();) {
+		int u = uElem->first;
+		uElem++;
+		for (auto& vElem = adj_[1][u].begin(); vElem != adj_[1][u].end(); ) {
+			int v = vElem->first;
+			vElem++;
+			if (rank_[v] < rank_[u])
+				adj_[1][u].erase(v);
+		}
+	}
+
+	// removing edges from upper rank vertex to lower rank vertex in forward Adjacency list 
+	for (auto& uElem = adj_[0].begin(); uElem != adj_[0].end();) {
+		int u = uElem->first;
+		uElem++;
+		for (auto& vElem = adj_[0][u].begin(); vElem != adj_[0][u].end(); ) {
+			int v = vElem->first;
+			vElem++;
+			if (rank_[v] < rank_[u])
+				adj_[0][u].erase(v);
+		}
+	}
 }
 
 void Adv::ContractionHierarchies::preprocess() {
 
-	setNodeContractionOrder();
+	initNodeContractionOrder();
+	shouldAddShortcut = true;
+	int rankCounter = 1;
 	
-	for (int node : nodeContractionOrder_)
-		if (!isContracted[node]) {
-			contractNode(node);
-		}		
+	while (!importanceQ.empty()) {
+		auto node = importanceQ.top().second;
+		importanceQ.pop();
+
+		contractNode(node);
+
+		if (importanceQ.empty() || nodeContractionImp_ <= importanceQ.top().first) {
+			for (int i = 0; i < shortcutCount_; i++) {
+				addShortcut(shortcuts_[i].v1, shortcuts_[i].v2, shortcuts_[i].dist);
+			}
+			updateNodeLevel(node);
+			rank_[node] = rankCounter++;
+		}
+		else
+			importanceQ.push(make_pair(nodeContractionImp_, node));
+	}
+
 	optimizeEdges();
 }
 
 void Adv::ContractionHierarchies::visit(DoubleQ& q, int side, int u, int v, llong cost) {
-	if (nodeOrder_[v] > nodeOrder_[u] && weights_[side][v] > cost) {
+	if (weights_[side][v] > cost) {
 		weights_[side][v] = cost;
 		workset_.push_back(v);
 		q[side].push(make_pair(cost, v));
 	}
-
 }
 
 void Adv::ContractionHierarchies::process(DoubleQ& q, QElem& uElem, int side) {
@@ -249,7 +328,6 @@ void Adv::ContractionHierarchies::process(DoubleQ& q, QElem& uElem, int side) {
 		llong wtToBe = uWt + adjWt;
 		visit(q, side, u, adjVtx, wtToBe);
 	}
-
 }
 
 llong Adv::ContractionHierarchies::query(int s, int t) {
@@ -294,7 +372,6 @@ llong Adv::ContractionHierarchies::query(int s, int t) {
 
 	return dist == INF ? -1 : dist;
 }
-
 
 string Adv::ContractionHierarchies::query(vector<pair<int, int>> Queries) {
 	vector<int> QueryResult(Queries.size(), -1);
