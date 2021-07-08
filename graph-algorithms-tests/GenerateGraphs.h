@@ -74,7 +74,7 @@ void GenerateGraphs(std::pair<int, int> numVertex_MinMax, std::pair<int, int> nu
 
 	for (int i = 0; EdgeListWithWt.size() <= numEdges; i++) {
 		int v1 = rand() % (numVertex)+1,
-			v2 = rand() % (numVertex)+1,
+			v2 = (rand()+v1+numEdges) % (numVertex)+1,
 			wt = rand() % (wt_MinMax.second - wt_MinMax.first + 1) + wt_MinMax.first;
 
 		if (v1 <= numVertex && v2 <= numVertex && v1!=v2)

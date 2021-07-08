@@ -66,7 +66,7 @@ namespace Adv {
 		// Stores all the nodes visited either by forward or backward search.
 		vector<int> workset_;
 		// visited logs for each node
-		vector<bool> visited_;
+		vector<vector<bool>> visited_;
 
 		// Heuristic data items
 		vector<llong> minIncomingEdge_;
@@ -120,7 +120,7 @@ namespace Adv {
 }
 
 Adv::ContractionHierarchies::ContractionHierarchies(int n, DoubleAdjMapList Adj)
-	: n_(n + 1), adj_(Adj), weights_(2, vector<llong>(n_,INF)), visited_(n_, false), rank_(n_, INT_MAX), nodeLevel_(n_, 0), shortcuts_(3), minIncomingEdge_(n_, INF)
+	: n_(n + 1), adj_(Adj), weights_(2, vector<llong>(n_,INF)), visited_(2, vector<bool>(n_,false)), rank_(n_, INT_MAX), nodeLevel_(n_, 0), shortcuts_(3), minIncomingEdge_(n_, INF)
 {
 	workset_.reserve(n + 1);
 
@@ -141,7 +141,7 @@ void Adv::ContractionHierarchies::clear() {
 	for (int i = 0; i < workset_.size(); ++i) {
 		int v = workset_[i];
 		weights_[0][v] = weights_[1][v] = INF;
-		visited_[v] = false;
+		visited_[0][v] = visited_[1][v] = false;
 	}
 	workset_.clear();
 }
@@ -161,7 +161,7 @@ llong Adv::ContractionHierarchies::witnessSearch(int& u, int& v, int& w, llong& 
 	vector<llong> djWts(n_, INF); 
 
 	// limiting the number of loops during while()
-	int hopsLimit = 3;
+	int hopsLimit = 5;
 
 	djWts[u] = 0;
 	Q q;
@@ -348,12 +348,12 @@ llong Adv::ContractionHierarchies::query(int s, int t) {
 			FwdElem = q[0].top();
 			q[0].pop();
 
-			if (visited_[FwdElem.second] && dist > weights_[0][FwdElem.second] + weights_[1][FwdElem.second])
+			if (visited_[1][FwdElem.second] && dist > weights_[0][FwdElem.second] + weights_[1][FwdElem.second])
 				dist = weights_[0][FwdElem.second] + weights_[1][FwdElem.second];
-			else {
-				process(q, FwdElem, 0);
-				visited_[FwdElem.second] = true;
-			}
+			
+			process(q, FwdElem, 0);
+			visited_[0][FwdElem.second] = true;
+			
 
 		}
 
@@ -361,12 +361,12 @@ llong Adv::ContractionHierarchies::query(int s, int t) {
 			RevElem = q[1].top();
 			q[1].pop();
 
-			if (visited_[RevElem.second] && dist > weights_[0][RevElem.second] + weights_[1][RevElem.second])
+			if (visited_[0][RevElem.second] && dist > weights_[0][RevElem.second] + weights_[1][RevElem.second])
 				dist = weights_[0][RevElem.second] + weights_[1][RevElem.second];
-			else {
-				process(q, RevElem, 1);
-				visited_[RevElem.second] = true;
-			}
+			
+			process(q, RevElem, 1);
+			visited_[1][RevElem.second] = true;
+			
 		}
 	}
 

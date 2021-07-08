@@ -242,27 +242,6 @@ c:\program files (x86)\microsoft visual studio\2017\professional\vc\tools\msvc\1
           ]
   a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\dijkstra.h(40): note: see reference to function template instantiation 'std::pair<int,llong>::pair<llong,int,0>(std::pair<llong,int> &&) noexcept' being compiled
   a:\coursera\algo on graphs\graph-algorithms\graph-algorithms\dijkstra.h(40): note: see reference to function template instantiation 'std::pair<int,llong>::pair<llong,int,0>(std::pair<llong,int> &&) noexcept' being compiled
-c:\program files (x86)\microsoft visual studio\2017\professional\vc\tools\msvc\14.16.27023\include\utility(173): warning C4244: 'initializing': conversion from '_Ty' to '_Ty2', possible loss of data
-          with
-          [
-              _Ty=double
-          ]
-          and
-          [
-              _Ty2=int
-          ]
-  a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\contractionhierarchiestests.h(42): note: see reference to function template instantiation 'std::pair<int,int>::pair<int,double,0>(_Other1 &&,_Other2 &&) noexcept' being compiled
-          with
-          [
-              _Other1=int,
-              _Other2=double
-          ]
-  a:\coursera\algo on graphs\graph-algorithms\graph-algorithms-tests\contractionhierarchiestests.h(42): note: see reference to function template instantiation 'std::pair<int,int>::pair<int,double,0>(_Other1 &&,_Other2 &&) noexcept' being compiled
-          with
-          [
-              _Other1=int,
-              _Other2=double
-          ]
 a:\coursera\algo on graphs\graph-algorithms\packages\microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.0\build\native\include\gtest\gtest.h(1392): warning C4805: '==': unsafe mix of type 'const T1' and type 'const T2' in operation
           with
           [

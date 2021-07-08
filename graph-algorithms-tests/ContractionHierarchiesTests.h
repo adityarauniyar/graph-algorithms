@@ -4,6 +4,7 @@
 #include "../graph-algorithms/ContractionHierarchies.h"
 #include "InputFromStream.h"
 #include "..\graph-algorithms\Dijkstra.h"
+#include "..\graph-algorithms\Bidijkstra.h"
 #include "GenerateGraphs.h"
 
 // Problem Description
@@ -39,25 +40,30 @@
 // Stress Test with Dijkstra
 TEST(DISABLED_ContractionHierarchiesTests, Stress_Test) {
 
-	const std::pair<int, int> numVertex_MinMax = { 1, 1.1e5 };
-	const std::pair<int, int> numEdges_MinMax = { 1 , 2.5e5 };
-	const std::pair<int, int> wt_MinMax = { 0 , 2e5 };
-	//const std::pair<int, int> numVertex_MinMax = { 1, 10 };
-	//const std::pair<int, int> numEdges_MinMax = { 1 , 10};
-	//const std::pair<int, int> wt_MinMax = { 0 , 10 };
+	//const std::pair<int, int> numVertex_MinMax = { 2, 1.1e5 };
+	//const std::pair<int, int> numEdges_MinMax = { 1 , 2.5e5 };
+	//const std::pair<int, int> wt_MinMax = { 0 , 2e5 };
+	const std::pair<int, int> numVertex_MinMax = { 2, 10 };
+	const std::pair<int, int> numEdges_MinMax = { 1 , 10};
+	const std::pair<int, int> wt_MinMax = { 0 , 10 };
 
-	for (llong test = 0; test < 1e4; test++) {
+	for (llong test = 0; test < 1e5; test++) {
 		int n, m, u, v;
 		Adj AdjListWithCost;
+		DoubleAdj DAdjListWithCost(2);
 		DoubleAdjMapList mapAdj;
 		std::vector<std::vector<int>> EdgeListWithWt;
 
 		GenerateGraphs(numVertex_MinMax, numEdges_MinMax, wt_MinMax, n, m, EdgeListWithWt, u, v);
 		AdjListWithCost = GenerateAdjList(n, EdgeListWithWt);
+		DAdjListWithCost = GenerateBiDirectionAdjList(n, EdgeListWithWt);
 		convertAdjToDoubleMapAdj(AdjListWithCost, mapAdj);
 
 		Adv::Dijkstra Dj(n, m, EdgeListWithWt, true, u, v);
 		llong DijkstraResult = Dj.GetDijkstraDistance();
+
+		Adv::Bidijkstra BDj(n, DAdjListWithCost);
+		llong BidijkstralResult = BDj.query(u,v);
 
 		Adv::ContractionHierarchies CH(n, mapAdj);
 		auto start = chrono::high_resolution_clock::now();
@@ -67,7 +73,7 @@ TEST(DISABLED_ContractionHierarchiesTests, Stress_Test) {
 
 		// EXPECT_EQ(DijkstraResult, ContractionHierarchiesResult);
 
-		if (DijkstraResult != ContractionHierarchiesResult) {
+		if (BidijkstralResult != ContractionHierarchiesResult) {
 			std::cout << std::endl << "Failing test case caught";
 			convertAdjToDoubleMapAdj(AdjListWithCost, mapAdj);
 			Adv::ContractionHierarchies CH(n, mapAdj);
@@ -156,4 +162,28 @@ TEST(ContractionHierarchiesTests, CASE_6) {
 	string ActualResult = CH.query(Queries);
 
 	EXPECT_EQ("4", ActualResult);
+}
+TEST(ContractionHierarchiesTests, CASE_7) {
+	int n;
+	DoubleAdjMapList adj;
+	std::vector<std::pair<int, int>> Queries;
+	std::istringstream inputStrm("5 8 1 2 5 2 1 0 1 5 6 5 1 0 2 5 9 3 2 8 3 4 3 5 3 7 1 2 4");
+	inputToVars(inputStrm, n, adj, Queries);
+
+	Adv::ContractionHierarchies CH(n, adj);
+	string ActualResult = CH.query(Queries);
+
+	EXPECT_EQ("16", ActualResult);
+}
+TEST(ContractionHierarchiesTests, CASE_8) {
+	int n;
+	DoubleAdjMapList adj;
+	std::vector<std::pair<int, int>> Queries;
+	std::istringstream inputStrm("5 8 1 2 5 2 1 0 1 5 6 5 1 0 2 5 9 3 2 8 3 4 3 5 3 7 1 3 5");
+	inputToVars(inputStrm, n, adj, Queries);
+
+	Adv::ContractionHierarchies CH(n, adj);
+	string ActualResult = CH.query(Queries);
+
+	EXPECT_EQ("14", ActualResult);
 }
